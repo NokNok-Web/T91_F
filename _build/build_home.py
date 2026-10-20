@@ -5,6 +5,9 @@ os.chdir(sys.argv[1])
 src=open('T91_presentazione_nuovo_sito.html').read()
 head=src[:src.index('</head>')].replace('<title>Il nuovo T91</title>','<title>T91 · Homepage</title>')
 svg=src[src.index('<svg width="0"'):src.index('</svg>',src.index('<svg width="0"'))+6]
+import base64
+b64=lambda f:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode()
+HD=b64('img/hero-desktop.jpg'); HM=b64('img/hero-mobile.jpg')
 n1=re.search(r'src="(data:image/jpeg;base64,[^"]+)"',src).group(1)
 C=S.CDN; PDP='T91_mockup_pagina_prodotto.html'
 def card(name,img,price,badge='',link='#',old='',sub=''):
@@ -35,13 +38,14 @@ body=f'''<div class="p home">
 {S.TOPBAR}  <div class="p-bar"><div class="p-marq"><span>⚡ SPEDIZIONE GRATUITA 24/48H</span><span>· RESO GRATUITO 30 GIORNI</span><span>· PAGA IN 3 RATE CON KLARNA</span><span>· T91 CLUB: -30% SEMPRE</span><span>⚡ SPEDIZIONE GRATUITA 24/48H</span><span>· RESO GRATUITO 30 GIORNI</span><span>· PAGA IN 3 RATE CON KLARNA</span><span>· T91 CLUB: -30% SEMPRE</span></div></div>
 {S.HEAD('')}
   <section class="h-hero">
+    <img class="bg m" src="{HM}" alt="Giocatore T91 al servizio">
+    <img class="bg d" src="{HD}" alt="Giocatore T91 al servizio in torneo">
     <div class="tx">
       <span class="ey">Novità · Holo Collection</span>
       <h1>Nata per chiudere<br>il punto.</h1>
       <p>La nuova linea Master 6.0: carbonio, potenza e i colori Holo.</p>
       <div class="ctas"><a class="h-btn v" href="{PDP}">Scopri la Boss One K12</a><a class="h-btn o" href="#">Tutte le racchette</a></div>
     </div>
-    <a class="im" href="{PDP}"><picture><source media="(min-width:900px)" srcset="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_pc.webp?v=1791307698&width=1600"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=900" alt="Racchetta T91 Holo arancione"></picture></a>
   </section>
 
   <section class="h-sec">
@@ -125,13 +129,15 @@ css='''<style>
 .h-btn.o{border:1px solid rgba(255,255,255,.4);color:#fff}
 .h-btn.k{background:#000;color:#fff}
 .ey{display:block;font-size:13px;color:var(--mute);margin-bottom:8px}
-.h-hero{background:#000;color:#fff;display:flex;flex-direction:column-reverse}
-.h-hero .im{display:block;aspect-ratio:5/6;overflow:hidden}
-.h-hero .im img{width:100%;height:100%;object-fit:cover}
-.h-hero .tx{padding:28px 20px 36px}
+.h-hero{position:relative;background:#000;color:#fff;min-height:640px;display:flex;align-items:flex-end;overflow:hidden}
+.h-hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.h-hero .bg.m{object-position:50% 20%}
+.h-hero .bg.d{display:none}
+.h-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.85) 88%)}
+.h-hero .tx{position:relative;z-index:1;padding:28px 20px 36px}
 .h-hero .ey{color:var(--volt)}
 .h-hero h1{font-weight:400;font-size:42px;line-height:1;letter-spacing:-.04em}
-.h-hero p{font-size:16px;color:#C7C7CC;margin:14px 0 22px;max-width:420px}
+.h-hero p{font-size:16px;color:#E5E5EA;margin:14px 0 22px;max-width:420px}
 .h-hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
 .h-sec{padding:48px 20px}
 .h-lvs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -208,10 +214,12 @@ css='''<style>
 .home .p-sg div{min-height:170px}
 @container dev (min-width: 900px){
   .home .p-sh h2 br{display:inline}
-  .h-hero{flex-direction:row;align-items:stretch;min-height:640px}
-  .h-hero .tx{flex:1;display:flex;flex-direction:column;justify-content:center;padding:64px 40px 64px 80px}
-  .h-hero .im{flex:1.25;aspect-ratio:auto}
-  .h-hero h1{font-size:76px}
+  .h-hero{min-height:720px;align-items:center}
+  .h-hero .bg.m{display:none}
+  .h-hero .bg.d{display:block;width:128%;right:auto;object-position:50% 25%}
+  .h-hero::after{background:linear-gradient(90deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,.35) 38%,rgba(0,0,0,0) 60%)}
+  .h-hero .tx{padding:0 0 0 80px;max-width:560px}
+  .h-hero h1{font-size:68px}
   .h-hero p{font-size:19px}
   .h-sec{padding:88px 80px}
   .home .p-sh h2{font-size:52px}
