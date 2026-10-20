@@ -14,11 +14,13 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Questrial',system-ui,sans-serif;background:#fff;color:var(--ink);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
 main{flex:1;max-width:1000px;width:100%;margin:0 auto;padding:96px 20px 64px;text-align:center}
-.lg{height:52px;width:auto;margin:0 auto 28px;display:block}
+.lg{height:68px;width:auto;margin:0 auto 28px;display:block}
 h1{font-weight:400;font-size:clamp(40px,7vw,72px);line-height:1.04;letter-spacing:-.035em}
 p.sub{font-size:clamp(18px,2vw,22px);color:var(--mute);margin:18px auto 0;max-width:560px;line-height:1.4}
 .cards{display:grid;gap:16px;margin-top:56px;text-align:left}
 @media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+main{max-width:1180px}
 a.card{display:flex;flex-direction:column;gap:10px;background:var(--fog);border-radius:28px;padding:32px;color:inherit;text-decoration:none;min-height:240px;transition:transform .2s}
 a.card:hover{transform:translateY(-4px)}
 a.card.k{background:#000;color:#F5F5F7}
@@ -36,10 +38,11 @@ footer{text-align:center;font-size:12px;color:var(--mute);padding:24px 20px;back
 <main>
   <img class="lg" src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.style.display='none'">
   <h1>Il nuovo T91.</h1>
-  <p class="sub">La proposta NokNok per il nuovo sito: come lo costruiremo e come sarà la pagina prodotto.</p>
+  <p class="sub">La proposta NokNok per il nuovo sito: come lo costruiremo, come sarà la pagina prodotto e quali pagine avrà.</p>
   <div class="cards">
     <a class="card" href="T91_presentazione_nuovo_sito.html"><span class="n">01</span><span class="t">La presentazione</span><span class="d">Struttura della pagina prodotto, strumenti, servizi, Team Pro, Club, blog e tempi.</span><span class="go">Apri la presentazione</span></a>
     <a class="card k" href="T91_mockup_pagina_prodotto.html"><span class="n">02</span><span class="t">La pagina prodotto</span><span class="d">Il mockup cliccabile della Boss One K12, a tutto schermo. Provalo dal computer e dal telefono.</span><span class="go">Apri il mockup</span></a>
+    <a class="card" href="T91_alberatura_sito.html"><span class="n">03</span><span class="t">L'alberatura</span><span class="d">Tutte le pagine del nuovo sito, il nuovo menu e come si collegano tra loro.</span><span class="go">Apri l'alberatura</span></a>
   </div>
 </main>
 <footer>NokNok × T91 Padel · Documento riservato, non indicizzato</footer>

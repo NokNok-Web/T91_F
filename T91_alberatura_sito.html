@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>T91 · Alberatura del sito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A0A0A;--ink2:#1D1D1F;--fog:#F5F5F7;--line:#E5E5EA;--mute:#6E6E73;--volt:#D4FF00;--gut:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Questrial',system-ui,sans-serif;background:#fff;color:var(--ink2);font-size:17px;line-height:1.5;font-synthesis:none;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+b{font-weight:400}
+a{color:inherit;text-decoration:none}
+@media(min-width:900px){:root{--gut:40px}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:52px}
+.nav .br{display:flex;align-items:center;gap:10px;font-size:14px;white-space:nowrap}
+.nav .br img{height:24px;width:auto}
+.nav nav{display:flex;gap:22px;margin-left:auto;font-size:12.5px;color:#424245}
+.nav nav a:hover{color:var(--ink)}
+@media(max-width:899px){.nav nav{display:none}}
+
+.sec{padding:112px 0}
+.sec.fog{background:var(--fog)}
+.sec.dark{background:#000;color:#F5F5F7}
+@media(max-width:899px){.sec{padding:76px 0}}
+.center{text-align:center}
+.eye{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--mute);margin-bottom:14px}
+.eye::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.dark .eye{color:#A1A1A6}
+h1{font-weight:400;font-size:clamp(46px,8vw,92px);line-height:1.02;letter-spacing:-.035em}
+h2{font-weight:400;font-size:clamp(34px,5.2vw,60px);line-height:1.05;letter-spacing:-.03em}
+h3{font-weight:400}
+.sub{font-size:clamp(18px,2vw,23px);line-height:1.42;color:var(--mute);margin-top:18px;letter-spacing:-.01em}
+.center .sub{max-width:720px;margin-left:auto;margin-right:auto}
+.dark .sub{color:#A1A1A6}
+
+.hero{padding:96px 0 72px;text-align:center}
+.hero .lg{height:72px;width:auto;margin:0 auto 28px;display:block}
+.legend{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px;font-size:14px}
+.legend span{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:980px;background:var(--fog)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.d-new{background:var(--volt);box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.d-move{background:#8E8E93}
+.d-keep{background:#fff;box-shadow:inset 0 0 0 1.5px #1D1D1F}
+
+/* OGGI */
+.today{display:grid;gap:16px;margin-top:56px}
+@media(min-width:900px){.today{grid-template-columns:1.25fr 1fr}}
+.menu-now{background:#fff;border-radius:28px;padding:28px}
+.menu-now .bar{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;padding-bottom:18px;border-bottom:1px solid var(--line);color:#3A3A3C}
+.menu-now .bar span:first-child{color:var(--mute)}
+.menu-now .cols{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:22px}
+@media(min-width:700px){.menu-now .cols{grid-template-columns:repeat(4,1fr)}}
+.menu-now h5{font-weight:400;font-size:15px;margin-bottom:8px}
+.menu-now li{list-style:none;font-size:12.5px;color:var(--mute);padding:2px 0}
+.menu-now li.hl{color:var(--ink);background:#FFF4E5;border-radius:6px;padding:2px 6px;margin-left:-6px;width:max-content}
+.issues{display:flex;flex-direction:column;gap:12px}
+.issue{background:#fff;border-radius:22px;padding:22px 24px}
+.issue b{display:block;font-size:19px;letter-spacing:-.01em;margin-bottom:4px}
+.issue p{font-size:15.5px;color:#3A3A3C}
+
+/* MENU NUOVO */
+.newmenu{margin-top:56px;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.08)}
+.nm-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 28px;background:#000;color:#D2D2D7;font-size:12.5px;flex-wrap:wrap}
+.nm-top .l,.nm-top .r{display:flex;gap:20px;flex-wrap:wrap}
+.nm-top .r{color:#A1A1A6}
+.nm-main{display:flex;align-items:center;gap:26px;padding:20px 28px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.nm-main img{height:34px;width:auto;margin-right:20px}
+.nm-main span{font-size:15px}
+.nm-main span.on{border-bottom:2px solid var(--ink);padding-bottom:2px}
+.nm-main span.club{background:var(--volt);padding:5px 12px;border-radius:980px}
+.nm-main .ic{margin-left:auto;display:flex;gap:18px;color:var(--mute);font-size:13px}
+.nm-mega{display:grid;gap:28px;padding:32px 28px}
+@media(min-width:900px){.nm-mega{grid-template-columns:repeat(3,1fr) 1.3fr}}
+.nm-mega h5{font-weight:400;font-size:13px;color:var(--mute);margin-bottom:12px}
+.nm-mega li{list-style:none;font-size:17px;padding:5px 0}
+.nm-mega .promo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.nm-mega .promo div{border-radius:18px;padding:18px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;font-size:17px}
+.nm-mega .promo .a{background:var(--volt)}
+.nm-mega .promo .b{background:#000;color:#fff}
+.nm-mega .promo small{font-size:12.5px;opacity:.7;display:block}
+.mm-note{display:grid;gap:12px;margin-top:16px}
+@media(min-width:800px){.mm-note{grid-template-columns:repeat(3,1fr)}}
+.mm-note div{background:#fff;border-radius:22px;padding:22px}
+.mm-note b{display:block;font-size:18px;margin-bottom:4px}
+.mm-note p{font-size:15px;color:#3A3A3C}
+
+/* ALBERO */
+.tree{margin-top:64px}
+.root{display:flex;justify-content:center}
+.node-root{background:#000;color:#fff;border-radius:22px;padding:18px 28px;text-align:center}
+.node-root b{font-size:24px;display:block}
+.node-root code{color:#A1A1A6}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+.trunk{width:2px;height:36px;background:#C7C7CC;margin:0 auto}
+.branches{display:grid;gap:16px;position:relative;padding-top:28px;border-top:2px solid #C7C7CC}
+@media(min-width:700px){.branches{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.branches{grid-template-columns:repeat(4,1fr)}}
+.branch{background:var(--fog);border-radius:24px;padding:22px;position:relative;display:flex;flex-direction:column;gap:12px}
+.branch::before{content:"";position:absolute;top:-28px;left:32px;width:2px;height:28px;background:#C7C7CC}
+.branch .hd{display:flex;align-items:flex-start;gap:10px}
+.branch .hd .dot{margin-top:9px}
+.branch .hd b{font-size:22px;letter-spacing:-.015em;line-height:1.15;display:block}
+.branch .hd code{color:var(--mute)}
+.branch .desc{font-size:14.5px;color:#3A3A3C}
+.leaf{background:#fff;border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.leaf .t{display:flex;align-items:center;gap:8px;font-size:15px}
+.leaf code{color:var(--mute);font-size:11.5px;padding-left:18px;word-break:break-all}
+.leaf ul{list-style:none;padding-left:18px;margin-top:4px;font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;gap:2px 10px}
+.branch.k{background:#000;color:#F5F5F7}
+.branch.k .desc{color:#C7C7CC}
+.branch.k .leaf{background:#1D1D1F}
+.branch.k .hd code,.branch.k .leaf code,.branch.k .leaf ul{color:#8E8E93}
+.side{display:grid;gap:16px;margin-top:16px}
+@media(min-width:900px){.side{grid-template-columns:repeat(3,1fr)}}
+.side .box{border:1px solid var(--line);border-radius:24px;padding:22px}
+.side .box h4{font-weight:400;font-size:13px;color:var(--mute);margin-bottom:10px}
+.side .box li{list-style:none;font-size:15px;padding:6px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.side .box li:first-child{border-top:0}
+.side .box li code{color:var(--mute)}
+
+/* PERCORSI */
+.paths{display:grid;gap:16px;margin-top:56px}
+.path{background:#1D1D1F;border-radius:24px;padding:26px}
+.path .ti{font-size:21px;color:#F5F5F7;letter-spacing:-.01em}
+.path .why{font-size:15px;color:#A1A1A6;margin-top:4px}
+.steps{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+.step{background:#2C2C2E;color:#F5F5F7;border-radius:980px;padding:8px 14px;font-size:14px;white-space:nowrap}
+.step.v{background:var(--volt);color:#000}
+.arr{color:#6E6E73;font-size:16px}
+
+/* TEMPLATE */
+.tpls{display:grid;gap:12px;margin-top:56px}
+@media(min-width:700px){.tpls{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1050px){.tpls{grid-template-columns:repeat(3,1fr)}}
+.tpl{background:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:8px;min-height:170px}
+.tpl .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tpl .n{font-size:13px;color:var(--mute)}
+.ph{font-size:11.5px;padding:3px 10px;border-radius:980px;background:var(--fog)}
+.ph.f1{background:#000;color:var(--volt)}
+.tpl b{font-size:20px;letter-spacing:-.015em}
+.tpl p{font-size:14.5px;color:#3A3A3C}
+.tpl .ex{margin-top:auto;font-size:12.5px;color:var(--mute)}
+.tpl.done{box-shadow:inset 0 0 0 2px var(--volt)}
+.count{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.count div{background:#fff;border-radius:18px;padding:16px 22px;text-align:center}
+.count .n{font-size:40px;letter-spacing:-.04em;line-height:1}
+.count .l{font-size:13px;color:var(--mute)}
+
+/* DOMANDE */
+.qs{display:grid;gap:0;margin-top:48px;border-top:1px solid var(--line)}
+@media(min-width:900px){.qs{grid-template-columns:1fr 1fr;column-gap:48px}}
+.q{display:grid;grid-template-columns:36px 1fr;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px}
+.q span{color:var(--mute);font-size:14px}
+.foot{background:var(--fog);color:var(--mute);font-size:12px;padding:28px 0;border-top:1px solid var(--line)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="wrap">
+  <div class="br"><img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='T91'"> Alberatura del sito</div>
+  <nav><a href="#oggi">Oggi</a><a href="#menu">Il nuovo menu</a><a href="#albero">L'albero</a><a href="#percorsi">Collegamenti</a><a href="#pagine">Pagine da fare</a><a href="#domande">Da decidere</a><a href="index.html">← Indice</a></nav>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <img class="lg" src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.style.display='none'">
+  <h1>L'alberatura<br>del nuovo sito.</h1>
+  <p class="sub" style="max-width:660px;margin-left:auto;margin-right:auto">Quali pagine avrà il nuovo T91, come sono organizzate e come si collegano tra loro. È la mappa da cui partiamo per disegnare ogni pagina.</p>
+  <div class="legend"><span><i class="dot d-new"></i>Nuova</span><span><i class="dot d-move"></i>Esiste, si sposta o cambia</span><span><i class="dot d-keep"></i>Esiste, resta</span></div>
+</div></header>
+
+<!-- OGGI -->
+<section class="sec fog" id="oggi"><div class="wrap">
+  <div class="center"><span class="eye">Oggi</span><h2>Il menu attuale.</h2>
+  <p class="sub">Tutto sta in un unico grande menu: prodotti, programmi per i centri e buoni regalo sono allo stesso livello. Ecco cosa c'è e cosa non funziona.</p></div>
+  <div class="today">
+    <div class="menu-now">
+      <div class="bar"><span>Shop</span><span>Outlet</span><span>Trova T91</span><span>Trova la tua racchetta</span></div>
+      <div class="cols">
+        <div><h5>Racchette</h5><ul><li class="hl">Ambassador</li><li class="hl">Buoni regalo</li><li class="hl">Programma centri</li><li class="hl">Programma maestri</li></ul></div>
+        <div><h5>Uomo</h5><ul><li>T-shirt</li><li>Polo</li><li>Felpe</li><li>Giacche</li><li>Pantaloncini</li><li>Pantaloni</li></ul></div>
+        <div><h5>Donna</h5><ul><li>T-shirt</li><li>Top</li><li>Canottiere</li><li>Abiti</li><li>Felpe</li><li>Giacche</li><li>Pantaloni</li><li>Leggings</li><li>Gonne</li></ul></div>
+        <div><h5>Accessori</h5><ul><li>Cappellini</li><li>Polsini</li><li>Ciabatte</li><li>Calze</li><li>Borse e zaini</li><li>Teli</li><li>Palline</li><li>Overgrip e copritesta</li><li>Manicotto</li></ul></div>
+      </div>
+    </div>
+    <div class="issues">
+      <div class="issue"><b>Le racchette sono un link solo</b><p>Nessuna divisione per livello o stile di gioco: chi entra trova tutte le pale insieme.</p></div>
+      <div class="issue"><b>Shop e programmi mescolati</b><p>Ambassador, centri e maestri stanno sotto "Racchette", come se fossero prodotti.</p></div>
+      <div class="issue"><b>Servizi e team non esistono</b><p>Repair, ritiro usato, personalizzazione, Club e i vostri pro non hanno una pagina.</p></div>
+      <div class="issue"><b>Niente blog</b><p>Nessuna pagina per farsi trovare su Google con ricerche come "racchetta padel principianti".</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- MENU NUOVO -->
+<section class="sec" id="menu"><div class="wrap">
+  <div class="center"><span class="eye">Il nuovo menu</span><h2>Lo shop davanti.<br>Il resto ben ordinato.</h2>
+  <p class="sub">Sette voci principali per chi compra. Sopra, una barra sottile per offerte e per chi lavora con T91: centri, maestri, ambassador.</p></div>
+  <div class="newmenu">
+    <div class="nm-top"><div class="l"><span>Outlet</span><span>Mystery Box</span><span>Buoni regalo</span><span>Trova T91 vicino a te</span></div><div class="r"><span>Per centri e maestri</span><span>IT / EN</span></div></div>
+    <div class="nm-main"><img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='<b>T91</b>'"><span class="on">Racchette</span><span>Abbigliamento</span><span>Accessori</span><span>Team Pro</span><span>Servizi</span><span>Blog</span><span class="club">T91 Club</span><span class="ic"><span>Cerca</span><span>Account</span><span>Carrello</span></span></div>
+    <div class="nm-mega">
+      <div><h5>Per livello</h5><ul><li>Principianti</li><li>Intermedi</li><li>Avanzati</li><li>Pro</li></ul></div>
+      <div><h5>Per gioco</h5><ul><li>Potenza</li><li>Controllo</li><li>Polivalenti</li></ul></div>
+      <div><h5>Collezioni</h5><ul><li>Holo</li><li>Signature Pro</li><li>Tutte le racchette</li></ul></div>
+      <div class="promo"><div class="a"><small>4 domande</small>Trova la tua T91</div><div class="b"><small>Fianco a fianco</small>Confronta le pale</div></div>
+    </div>
+  </div>
+  <div class="mm-note">
+    <div><b>Su mobile</b><p>Le stesse voci in un menu a tutta pagina. Racchette si apre per prima, con livello e stile di gioco ben visibili.</p></div>
+    <div><b>"Per centri e maestri"</b><p>Programma centri, Programma maestri e Ambassador escono dal menu prodotti e diventano un'area dedicata.</p></div>
+    <div><b>Offerte separate</b><p>Outlet, Mystery Box e Buoni regalo restano sempre raggiungibili, senza confondersi con le collezioni.</p></div>
+  </div>
+</div></section>
+
+<!-- ALBERO -->
+<section class="sec fog" id="albero"><div class="wrap">
+  <div class="center"><span class="eye">L'albero</span><h2>Tutte le pagine,<br>con il loro indirizzo.</h2>
+  <p class="sub">Ogni riquadro è una pagina. L'indirizzo sotto è quello che vedrà il cliente e che Google indicizzerà.</p></div>
+  <div class="tree">
+    <div class="root"><div class="node-root"><b>Home</b><code>t91padel.com</code></div></div>
+    <div class="trunk"></div>
+    <div class="branches">
+
+      <div class="branch">
+        <div class="hd"><i class="dot d-move"></i><div><b>Racchette</b><code>/racchette</code></div></div>
+        <p class="desc">Il cuore del fatturato: divise per livello e per stile di gioco.</p>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Per livello</span><code>/racchette/principianti</code><ul><li>Principianti</li><li>Intermedi</li><li>Avanzati</li><li>Pro</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Per gioco</span><code>/racchette/potenza</code><ul><li>Potenza</li><li>Controllo</li><li>Polivalenti</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Collezioni</span><code>/racchette/holo</code><ul><li>Holo</li><li>Signature Pro</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Trova la tua T91 (quiz)</span><code>/racchette/trova-la-tua-t91</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Confronta</span><code>/racchette/confronta</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Scheda racchetta</span><code>/racchette/avanzati/boss-one-k12…</code></div>
+      </div>
+
+      <div class="branch">
+        <div class="hd"><i class="dot d-move"></i><div><b>Abbigliamento</b><code>/abbigliamento</code></div></div>
+        <p class="desc">Uomo e Donna restano, con colori e taglie nella stessa scheda.</p>
+        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Uomo</span><code>/abbigliamento/uomo</code><ul><li>T-shirt</li><li>Polo</li><li>Felpe</li><li>Giacche</li><li>Pantaloncini</li><li>Pantaloni</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Donna</span><code>/abbigliamento/donna</code><ul><li>T-shirt</li><li>Top</li><li>Canottiere</li><li>Abiti</li><li>Felpe</li><li>Giacche</li><li>Pantaloni</li><li>Leggings</li><li>Gonne</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Personalizzabili</span><code>/abbigliamento/personalizzabili</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Scheda capo</span><code>/abbigliamento/uomo/halo-t-shirt</code></div>
+      </div>
+
+      <div class="branch">
+        <div class="hd"><i class="dot d-keep"></i><div><b>Accessori</b><code>/accessori</code></div></div>
+        <p class="desc">Le stesse categorie di oggi, raggruppate per uso.</p>
+        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Per la racchetta</span><code>/accessori/overgrip-e-copritesta</code><ul><li>Overgrip e copritesta</li><li>Palline</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Borse e zaini</span><code>/accessori/borse-e-zaini</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Indossabili</span><code>/accessori/calze</code><ul><li>Cappellini</li><li>Polsini</li><li>Calze</li><li>Manicotto</li><li>Ciabatte</li><li>Teli</li></ul></div>
+      </div>
+
+      <div class="branch k">
+        <div class="hd"><i class="dot d-new"></i><div><b>Team Pro</b><code>/team-pro</code></div></div>
+        <p class="desc">I vostri atleti come prova del prodotto.</p>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Roster</span><code>/team-pro</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Scheda atleta</span><code>/team-pro/nome-cognome</code><ul><li>Ranking</li><li>Tornei</li><li>La sua pala</li><li>Il suo set</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Team Under</span><code>/team-pro/under</code></div>
+      </div>
+
+      <div class="branch">
+        <div class="hd"><i class="dot d-new"></i><div><b>Servizi</b><code>/servizi</code></div></div>
+        <p class="desc">Tutto ciò che oggi fate ma non si vede.</p>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>T91 Care · ritiro usato</span><code>/servizi/t91-care</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>T91 Repair</span><code>/servizi/repair</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Protezione racchetta</span><code>/servizi/protezione</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Personalizza</span><code>/servizi/personalizza</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Click &amp; Collect</span><code>/servizi/click-collect</code></div>
+      </div>
+
+      <div class="branch">
+        <div class="hd"><i class="dot d-new"></i><div><b>Blog</b><code>/blog</code></div></div>
+        <p class="desc">Due articoli al mese, divisi in quattro rubriche.</p>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Rubriche</span><code>/blog/guide</code><ul><li>Novità</li><li>Tornei</li><li>I nostri pro</li><li>Guide</li></ul></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Articolo</span><code>/blog/guide/come-scegliere-la-racchetta</code></div>
+      </div>
+
+      <div class="branch">
+        <div class="hd"><i class="dot d-new"></i><div><b>T91 Club</b><code>/club</code></div></div>
+        <p class="desc">Membership e vantaggi, collegata all'account.</p>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>Il Club</span><code>/club</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Account</span><code>/account</code><ul><li>Ordini</li><li>Club</li><li>Risultato quiz</li><li>Richieste Care e Repair</li></ul></div>
+      </div>
+
+      <div class="branch">
+        <div class="hd"><i class="dot d-move"></i><div><b>Per centri e maestri</b><code>/partner</code></div></div>
+        <p class="desc">Area per chi lavora con T91, fuori dal menu prodotti.</p>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Programma centri</span><code>/partner/centri</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Programma maestri</span><code>/partner/maestri</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Ambassador</span><code>/partner/ambassador</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-move"></i>Trova T91 vicino a te</span><code>/trova-t91</code></div>
+        <div class="leaf"><span class="t"><i class="dot d-new"></i>T91 Experience</span><code>/partner/experience</code></div>
+      </div>
+
+    </div>
+    <div class="side">
+      <div class="box"><h4>Offerte · barra in alto</h4><ul><li>Outlet <code>/outlet</code></li><li>Mystery Box <code>/mystery-box</code></li><li>Buoni regalo <code>/buoni-regalo</code></li></ul></div>
+      <div class="box"><h4>Sempre presenti</h4><ul><li>Ricerca</li><li>Carrello e checkout <code>/carrello</code></li><li>Lingua <code>/en/…</code></li></ul></div>
+      <div class="box"><h4>Nel footer</h4><ul><li>Chi siamo <code>/chi-siamo</code></li><li>Assistenza e FAQ <code>/assistenza</code></li><li>Spedizioni e resi</li><li>Privacy, cookie, termini</li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- PERCORSI -->
+<section class="sec dark" id="percorsi"><div class="wrap">
+  <div class="center"><span class="eye">Come si collegano</span><h2>Ogni pagina<br>porta alla prossima.</h2>
+  <p class="sub">Il 72% delle visite entra da una pagina interna, non dalla home. Per questo ogni pagina ha sempre un passo successivo verso l'acquisto. Ecco i percorsi principali.</p></div>
+  <div class="paths">
+    <div class="path"><div class="ti">Da Google, chi cerca la prima racchetta</div><div class="why">Ricerca non-brand, utente che non conosce T91.</div>
+      <div class="steps"><span class="step">Articolo "Come scegliere la racchetta"</span><span class="arr">→</span><span class="step">Racchette · Principianti</span><span class="arr">→</span><span class="step">Scheda racchetta</span><span class="arr">→</span><span class="step v">Carrello</span></div></div>
+    <div class="path"><div class="ti">Chi è indeciso tra più modelli</div><div class="why">Racchetta da €300: serve una guida alla scelta.</div>
+      <div class="steps"><span class="step">Qualsiasi pagina</span><span class="arr">→</span><span class="step">Trova la tua T91</span><span class="arr">→</span><span class="step">Risultato su WhatsApp</span><span class="arr">→</span><span class="step">Confronta</span><span class="arr">→</span><span class="step">Scheda racchetta</span></div></div>
+    <div class="path"><div class="ti">Chi segue un pro</div><div class="why">Social, tornei, articoli sulle vittorie.</div>
+      <div class="steps"><span class="step">Blog · I nostri pro</span><span class="arr">→</span><span class="step">Scheda atleta</span><span class="arr">→</span><span class="step">La sua racchetta</span><span class="arr">→</span><span class="step v">Acquista il set</span></div></div>
+    <div class="path"><div class="ti">Chi ha già una pala</div><div class="why">Anche di un altro marchio: la portiamo verso una T91.</div>
+      <div class="steps"><span class="step">Servizi · T91 Care</span><span class="arr">→</span><span class="step">Valutazione dell'usato</span><span class="arr">→</span><span class="step">Racchette</span><span class="arr">→</span><span class="step v">Sconto nel carrello</span></div></div>
+    <div class="path"><div class="ti">Chi ha appena comprato</div><div class="why">Oggi il 77% compra una volta sola.</div>
+      <div class="steps"><span class="step">Carrello</span><span class="arr">→</span><span class="step">Account + Club</span><span class="arr">→</span><span class="step">Completa il look</span><span class="arr">→</span><span class="step v">Secondo acquisto</span></div></div>
+    <div class="path"><div class="ti">Un centro o un maestro</div><div class="why">Contatto commerciale, non un acquisto online.</div>
+      <div class="steps"><span class="step">Per centri e maestri</span><span class="arr">→</span><span class="step">Programma centri o maestri</span><span class="arr">→</span><span class="step v">Contatto WhatsApp</span></div></div>
+  </div>
+</div></section>
+
+<!-- PAGINE DA FARE -->
+<section class="sec fog" id="pagine"><div class="wrap">
+  <div class="center"><span class="eye">Pagine da disegnare</span><h2>Molte pagine,<br>pochi modelli.</h2>
+  <p class="sub">Non disegniamo ogni pagina da zero: costruiamo dei modelli e li riempiamo. Con questi modelli copriamo tutto l'albero.</p></div>
+  <div class="count"><div><div class="n">16</div><div class="l">modelli di pagina</div></div><div><div class="n">11</div><div class="l">per il lancio di gennaio</div></div><div><div class="n">1</div><div class="l">già pronto (scheda racchetta)</div></div></div>
+  <div class="tpls">
+    <div class="tpl done"><div class="top"><span class="n">01</span><span class="ph f1">Lancio</span></div><b>Scheda racchetta</b><p>Galleria, prezzo, peso, Care, recensioni, confronto, pro.</p><span class="ex">Pronta nel mockup</span></div>
+    <div class="tpl"><div class="top"><span class="n">02</span><span class="ph f1">Lancio</span></div><b>Home</b><p>Novità, racchette per livello, team, servizi, Club.</p><span class="ex">/</span></div>
+    <div class="tpl"><div class="top"><span class="n">03</span><span class="ph f1">Lancio</span></div><b>Categoria prodotti</b><p>Griglia con filtri. Un solo modello per racchette, abbigliamento e accessori.</p><span class="ex">/racchette/principianti, /abbigliamento/uomo…</span></div>
+    <div class="tpl"><div class="top"><span class="n">04</span><span class="ph f1">Lancio</span></div><b>Scheda abbigliamento e accessori</b><p>Colori e taglie nella stessa scheda, personalizzazione.</p><span class="ex">/abbigliamento/uomo/halo-t-shirt</span></div>
+    <div class="tpl"><div class="top"><span class="n">05</span><span class="ph f1">Lancio</span></div><b>Carrello e checkout</b><p>Care, Club, Klarna, Click &amp; Collect.</p><span class="ex">/carrello</span></div>
+    <div class="tpl"><div class="top"><span class="n">06</span><span class="ph f1">Lancio</span></div><b>Trova la tua T91</b><p>Quiz in 4 domande con risultato su WhatsApp.</p><span class="ex">/racchette/trova-la-tua-t91</span></div>
+    <div class="tpl"><div class="top"><span class="n">07</span><span class="ph f1">Lancio</span></div><b>Confronta</b><p>Fino a 4 racchette affiancate.</p><span class="ex">/racchette/confronta</span></div>
+    <div class="tpl"><div class="top"><span class="n">08</span><span class="ph f1">Lancio</span></div><b>Pagina servizio</b><p>Un modello per Care, Repair, Protezione, Personalizza, Click &amp; Collect.</p><span class="ex">/servizi/…</span></div>
+    <div class="tpl"><div class="top"><span class="n">09</span><span class="ph f1">Lancio</span></div><b>T91 Club</b><p>Vantaggi, prezzo, iscrizione.</p><span class="ex">/club</span></div>
+    <div class="tpl"><div class="top"><span class="n">10</span><span class="ph f1">Lancio</span></div><b>Account</b><p>Ordini, Club, quiz salvato, richieste.</p><span class="ex">/account</span></div>
+    <div class="tpl"><div class="top"><span class="n">11</span><span class="ph">Dopo il lancio</span></div><b>Team Pro</b><p>Roster con filtri.</p><span class="ex">/team-pro</span></div>
+    <div class="tpl"><div class="top"><span class="n">12</span><span class="ph">Dopo il lancio</span></div><b>Scheda atleta</b><p>Ranking, tornei, la sua pala, il suo set.</p><span class="ex">/team-pro/nome-cognome</span></div>
+    <div class="tpl"><div class="top"><span class="n">13</span><span class="ph f1">Lancio</span></div><b>Blog e articolo</b><p>Elenco per rubrica e pagina articolo con prodotti collegati.</p><span class="ex">/blog, /blog/guide/…</span></div>
+    <div class="tpl"><div class="top"><span class="n">14</span><span class="ph">Dopo il lancio</span></div><b>Per centri e maestri</b><p>Programmi, ambassador, Experience, contatti.</p><span class="ex">/partner/…</span></div>
+    <div class="tpl"><div class="top"><span class="n">15</span><span class="ph">Dopo il lancio</span></div><b>Trova T91</b><p>Mappa dei centri partner.</p><span class="ex">/trova-t91</span></div>
+    <div class="tpl"><div class="top"><span class="n">16</span><span class="ph">Dopo il lancio</span></div><b>Pagina di testo</b><p>Chi siamo, FAQ, spedizioni, resi, privacy.</p><span class="ex">/chi-siamo, /assistenza…</span></div>
+  </div>
+</div></section>
+
+<!-- DOMANDE -->
+<section class="sec" id="domande"><div class="wrap">
+  <div class="center"><span class="eye">Da decidere insieme</span><h2>Prima di disegnare.</h2></div>
+  <div class="qs">
+    <div class="q"><span>01</span>Le racchette per livello: chi decide in quale livello va ogni modello?</div>
+    <div class="q"><span>02</span>Mystery Box: resta tra le offerte o diventa una sezione fissa?</div>
+    <div class="q"><span>03</span>Ambassador: è un programma per maestri o un prodotto da vendere (oggi è una collezione)?</div>
+    <div class="q"><span>04</span>Team Pro al lancio o subito dopo: ci serve il materiale dei pro entro dicembre.</div>
+    <div class="q"><span>05</span>Accessori: confermate i tre gruppi (per la racchetta, borse, indossabili)?</div>
+    <div class="q"><span>06</span>Versione inglese: tutto il sito o solo shop e Team Pro?</div>
+  </div>
+</div></section>
+
+<div class="foot"><div class="wrap"><span>NokNok × T91 Padel · Alberatura del sito · bozza per discussione</span><a href="index.html">Torna all'indice</a></div></div>
+</body>
+</html>
