@@ -17,9 +17,6 @@ P=[
  dict(n='Huracán 2.0',i='Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628',p=328.90,lv='Principianti',st='Controllo',co='',b='Bestseller',k='Carbonio',w='—'),
  dict(n='Boss One 18K 3.0 PWR',i='BossOnePWR1.webp?v=1763487605',p=328.90,lv='Avanzati',st='Potenza',co='',b='',k='18K',w='—'),
  dict(n='Finder Pro K12 3.0 PWR',i='Finder_Pro_Remedi_3.0_PWR_1.webp?v=1780990777',p=328.90,lv='Intermedi',st='Polivalenti',co='Signature Pro',b='',k='12K',w='—'),
- dict(n='Huracán 2.0 · Outlet',i='Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628',p=189.90,o=328.90,lv='Principianti',st='Controllo',co='Outlet',b='-42%',k='Carbonio',w='—'),
- dict(n='Boss One 12K 3.0 PWR · Outlet',i='BossOne3.0Remedi1.webp?v=1763487535',p=189.90,o=328.90,lv='Avanzati',st='Potenza',co='Outlet',b='-42%',k='12K',w='—'),
- dict(n='Finder Pro K12 Master 5.0 · Outlet',i='FinderProK12Master51.webp?v=1768855180',p=189.90,o=328.90,lv='Intermedi',st='Controllo',co='Outlet',b='-42%',k='12K',w='—'),
 ]
 for x in P:
     x['img']=C+x['i']+'&width=600'; x['href']=S.LINKS['pdp'] if x.get('link')=='pdp' else '#'
@@ -192,7 +189,7 @@ const P='''+DATA+''';
 const screen=document.querySelector('.screen');
 screen.appendChild(document.getElementById('tpl-menu').content.cloneNode(true));
 t91Menu(screen);t91Mega(screen);t91Toast(screen);
-const G=[['lv','Livello',['Principianti','Intermedi','Avanzati','Pro']],['st','Stile di gioco',['Potenza','Controllo','Polivalenti']],['co','Collezione',['Holo','Signature Pro','Outlet']],['pz','Prezzo',['Sotto €200','€200 – €330']]];
+const G=[['lv','Livello',['Principianti','Intermedi','Avanzati','Pro']],['st','Stile di gioco',['Potenza','Controllo','Polivalenti']],['co','Collezione',['Holo','Signature Pro']],['pz','Prezzo',['Sotto €200','€200 – €330']]];
 const SLUG={Principianti:'principianti',Intermedi:'intermedi',Avanzati:'avanzati',Pro:'pro',Potenza:'potenza',Controllo:'controllo',Polivalenti:'polivalenti',Holo:'holo','Signature Pro':'signature',Outlet:'outlet','Sotto €200':'sotto-200','€200 – €330':'200-330'};
 const UNSLUG=Object.fromEntries(Object.entries(SLUG).map(([k,v])=>[v,k]));
 const KEY={Principianti:'lv',Intermedi:'lv',Avanzati:'lv',Pro:'lv',Potenza:'st',Controllo:'st',Polivalenti:'st',Holo:'co','Signature Pro':'co',Outlet:'co','Sotto €200':'pz','€200 – €330':'pz'};
@@ -204,7 +201,6 @@ function list(){let r=P.filter(x=>match(x,sel));const o=$('rkSort').value;if(o==
 function count(k,v){const s={...sel,[k]:v};return P.filter(x=>match(x,s)).length;}
 function groups(){return G.map(([k,l,opts])=>`<div class="fgrp"><h6>${l}</h6><div class="opts">${opts.map(o=>{const n=count(k,o);return `<button data-k="${k}" data-v="${o}" class="${sel[k]===o?'on':''}" ${n||sel[k]===o?'':'disabled'}>${o}<small>${n}</small></button>`}).join('')}</div></div>`).join('');}
 function title(){const lv=sel.lv,st=sel.st,co=sel.co;
-  if(co==='Outlet')return['Racchette in outlet.','Modelli delle stagioni passate, a prezzo ridotto. Stessa garanzia e reso gratuito.'];
   if(co==='Holo')return['Holo Collection.','La nuova linea Master 6.0: carbonio, potenza e i colori Holo.'];
   if(co==='Signature Pro')return['Signature Pro.','Le racchette progettate insieme ai nostri atleti.'];
   const L={Principianti:'per principianti',Intermedi:'per intermedi',Avanzati:'per giocatori avanzati',Pro:'per professionisti'}[lv]||'';

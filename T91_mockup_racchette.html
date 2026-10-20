@@ -1,4 +1,4 @@
-x<!doctype html>
+<!doctype html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
@@ -926,6 +926,53 @@ svg.f{fill:currentColor;stroke:none}
   .p-mega .svc b{font-size:15.5px}
   .p-mega .svc span{font-size:12.5px;color:var(--mute)}
 }
+
+/* accento blu #2541B2 (prova) */
+:root{--blu:#2541B2}
+.p-tile.b{background:var(--blu);color:#fff}
+.p-tile.b .p-eyebrow{color:rgba(255,255,255,.7)}
+.p-tile.b .p-meter .bar{background:rgba(255,255,255,.18)}
+.p-tile.b .p-meter .bar::after{background:var(--volt)}
+.p-tile.b .p-grip{background:rgba(255,255,255,.1);color:#fff}
+.p-tile.b .p-grip p{color:rgba(255,255,255,.85)}
+.p-tile.b .p-grip svg path{stroke:#fff}
+
+/* palette */
+.pal{display:grid;gap:12px;margin-top:56px}
+@media(min-width:760px){.pal{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.pal{grid-template-columns:repeat(4,1fr)}}
+.pal .sw{border-radius:28px;padding:26px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.pal .sw .hx{font-family:ui-monospace,Menlo,monospace;font-size:14px;opacity:.75}
+.pal .sw b{display:block;font-size:30px;letter-spacing:-.03em;line-height:1.05;margin-bottom:8px}
+.pal .sw p{font-size:15.5px;line-height:1.45}
+.pal .v{background:#D4FF00;color:#000}
+.pal .b{background:#2541B2;color:#fff}
+.pal .b p{color:rgba(255,255,255,.85)}
+.pal .f{background:#F5F5F7;color:#1D1D1F;box-shadow:inset 0 0 0 1px #E5E5EA}
+.pal .f p{color:#3A3A3C}
+.pal .k{background:#0A0A0A;color:#fff}
+.pal .k p{color:#C7C7CC}
+.pal-mix{margin-top:28px}
+.pal-mix .bar{display:flex;height:22px;border-radius:980px;overflow:hidden;box-shadow:inset 0 0 0 1px #E5E5EA}
+.pal-mix .lg{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px;font-size:14px;color:var(--mute)}
+.pal-mix .lg span{display:inline-flex;align-items:center;gap:8px}
+.pal-mix .lg i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.pal-ex{display:grid;gap:12px;margin-top:40px}
+@media(min-width:900px){.pal-ex{grid-template-columns:repeat(3,1fr)}}
+.pal-ex>div{border-radius:28px;padding:28px;min-height:240px;display:flex;flex-direction:column;gap:10px}
+.pal-ex small{font-size:13px;opacity:.7}
+.pal-ex b{font-size:36px;letter-spacing:-.04em;line-height:1}
+.pal-ex .e1{background:#0A0A0A;color:#fff}
+.pal-ex .e1 b{color:#D4FF00}
+.pal-ex .btn{margin-top:auto;align-self:flex-start;background:#D4FF00;color:#000;border-radius:980px;padding:11px 18px;font-size:15px}
+.pal-ex .e2{background:#2541B2;color:#fff}
+.pal-ex .m{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center;font-size:13px}
+.pal-ex .m i{height:6px;border-radius:3px;background:rgba(255,255,255,.2);position:relative;overflow:hidden}
+.pal-ex .m em{position:absolute;inset:0 auto 0 0;background:#D4FF00}
+.pal-ex .e2 .m:first-of-type{margin-top:auto}
+.pal-ex .e3{background:#F5F5F7;color:#0A0A0A}
+.pal-ex .e3 b{font-size:30px}
+.pal-ex .e3 .pr{margin-top:auto;font-size:26px;letter-spacing:-.02em}
 </style>
 <style>
 .r-hero{padding:8px 20px 20px}
@@ -1254,11 +1301,11 @@ function t91Toast(host){
   host.addEventListener('click',e=>{const a=e.target.closest('a');if(!a||a.getAttribute('href')!=='#')return;e.preventDefault();if(a.dataset.link)return;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1800);});
 }
 
-const P=[{"n": "Boss One K12 Pro Master 6.0", "i": "BossOneK12Master6.01.webp?v=1791205585", "p": 328.9, "lv": "Avanzati", "st": "Potenza", "co": "Holo", "b": "Novità", "link": "pdp", "k": "12K", "w": "356–365 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BossOneK12Master6.01.webp?v=1791205585&width=600", "href": "T91_mockup_pagina_prodotto.html"}, {"n": "Boss One K3 Pro Master", "i": "BossOneK3Master6.01.webp?v=1791205374", "p": 328.9, "lv": "Intermedi", "st": "Potenza", "co": "Holo", "b": "Novità", "k": "3K", "w": "356–365 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BossOneK3Master6.01.webp?v=1791205374&width=600", "href": "#"}, {"n": "Finder Pro Master K3", "i": "FinderProMasterK31.webp?v=1791205236", "p": 328.9, "lv": "Intermedi", "st": "Controllo", "co": "Holo", "b": "Novità", "k": "3K", "w": "348–355 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/FinderProMasterK31.webp?v=1791205236&width=600", "href": "#"}, {"n": "Huracán Full Black x Iriart 3.0", "i": "HURACANFULLBLACKXEMILIANOIRIART.webp?v=1791215495", "p": 328.9, "lv": "Pro", "st": "Polivalenti", "co": "Signature Pro", "b": "Signature", "k": "Carbonio", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/HURACANFULLBLACKXEMILIANOIRIART.webp?v=1791215495&width=600", "href": "#"}, {"n": "Huracán 2.0 12K x Bubu Salandro", "i": "LimitedEdition12KBubu.webp?v=1785322689", "p": 328.9, "lv": "Pro", "st": "Potenza", "co": "Signature Pro", "b": "Signature", "k": "12K", "w": "346–360 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/LimitedEdition12KBubu.webp?v=1785322689&width=600", "href": "#"}, {"n": "Huracán 2.0 3K x Bubu Salandro", "i": "LimitedEdition12KBubu2.webp?v=1785322689", "p": 328.9, "lv": "Avanzati", "st": "Polivalenti", "co": "Signature Pro", "b": "Signature", "k": "3K", "w": "346–360 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/LimitedEdition12KBubu2.webp?v=1785322689&width=600", "href": "#"}, {"n": "Huracán 2.0", "i": "Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628", "p": 328.9, "lv": "Principianti", "st": "Controllo", "co": "", "b": "Bestseller", "k": "Carbonio", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628&width=600", "href": "#"}, {"n": "Boss One 18K 3.0 PWR", "i": "BossOnePWR1.webp?v=1763487605", "p": 328.9, "lv": "Avanzati", "st": "Potenza", "co": "", "b": "", "k": "18K", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BossOnePWR1.webp?v=1763487605&width=600", "href": "#"}, {"n": "Finder Pro K12 3.0 PWR", "i": "Finder_Pro_Remedi_3.0_PWR_1.webp?v=1780990777", "p": 328.9, "lv": "Intermedi", "st": "Polivalenti", "co": "Signature Pro", "b": "", "k": "12K", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/Finder_Pro_Remedi_3.0_PWR_1.webp?v=1780990777&width=600", "href": "#"}, {"n": "Huracán 2.0 · Outlet", "i": "Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628", "p": 189.9, "o": 328.9, "lv": "Principianti", "st": "Controllo", "co": "Outlet", "b": "-42%", "k": "Carbonio", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628&width=600", "href": "#"}, {"n": "Boss One 12K 3.0 PWR · Outlet", "i": "BossOne3.0Remedi1.webp?v=1763487535", "p": 189.9, "o": 328.9, "lv": "Avanzati", "st": "Potenza", "co": "Outlet", "b": "-42%", "k": "12K", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BossOne3.0Remedi1.webp?v=1763487535&width=600", "href": "#"}, {"n": "Finder Pro K12 Master 5.0 · Outlet", "i": "FinderProK12Master51.webp?v=1768855180", "p": 189.9, "o": 328.9, "lv": "Intermedi", "st": "Controllo", "co": "Outlet", "b": "-42%", "k": "12K", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/FinderProK12Master51.webp?v=1768855180&width=600", "href": "#"}];
+const P=[{"n": "Boss One K12 Pro Master 6.0", "i": "BossOneK12Master6.01.webp?v=1791205585", "p": 328.9, "lv": "Avanzati", "st": "Potenza", "co": "Holo", "b": "Novità", "link": "pdp", "k": "12K", "w": "356–365 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BossOneK12Master6.01.webp?v=1791205585&width=600", "href": "T91_mockup_pagina_prodotto.html"}, {"n": "Boss One K3 Pro Master", "i": "BossOneK3Master6.01.webp?v=1791205374", "p": 328.9, "lv": "Intermedi", "st": "Potenza", "co": "Holo", "b": "Novità", "k": "3K", "w": "356–365 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BossOneK3Master6.01.webp?v=1791205374&width=600", "href": "#"}, {"n": "Finder Pro Master K3", "i": "FinderProMasterK31.webp?v=1791205236", "p": 328.9, "lv": "Intermedi", "st": "Controllo", "co": "Holo", "b": "Novità", "k": "3K", "w": "348–355 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/FinderProMasterK31.webp?v=1791205236&width=600", "href": "#"}, {"n": "Huracán Full Black x Iriart 3.0", "i": "HURACANFULLBLACKXEMILIANOIRIART.webp?v=1791215495", "p": 328.9, "lv": "Pro", "st": "Polivalenti", "co": "Signature Pro", "b": "Signature", "k": "Carbonio", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/HURACANFULLBLACKXEMILIANOIRIART.webp?v=1791215495&width=600", "href": "#"}, {"n": "Huracán 2.0 12K x Bubu Salandro", "i": "LimitedEdition12KBubu.webp?v=1785322689", "p": 328.9, "lv": "Pro", "st": "Potenza", "co": "Signature Pro", "b": "Signature", "k": "12K", "w": "346–360 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/LimitedEdition12KBubu.webp?v=1785322689&width=600", "href": "#"}, {"n": "Huracán 2.0 3K x Bubu Salandro", "i": "LimitedEdition12KBubu2.webp?v=1785322689", "p": 328.9, "lv": "Avanzati", "st": "Polivalenti", "co": "Signature Pro", "b": "Signature", "k": "3K", "w": "346–360 g", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/LimitedEdition12KBubu2.webp?v=1785322689&width=600", "href": "#"}, {"n": "Huracán 2.0", "i": "Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628", "p": 328.9, "lv": "Principianti", "st": "Controllo", "co": "", "b": "Bestseller", "k": "Carbonio", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628&width=600", "href": "#"}, {"n": "Boss One 18K 3.0 PWR", "i": "BossOnePWR1.webp?v=1763487605", "p": 328.9, "lv": "Avanzati", "st": "Potenza", "co": "", "b": "", "k": "18K", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BossOnePWR1.webp?v=1763487605&width=600", "href": "#"}, {"n": "Finder Pro K12 3.0 PWR", "i": "Finder_Pro_Remedi_3.0_PWR_1.webp?v=1780990777", "p": 328.9, "lv": "Intermedi", "st": "Polivalenti", "co": "Signature Pro", "b": "", "k": "12K", "w": "—", "img": "https://cdn.shopify.com/s/files/1/0826/8523/1445/files/Finder_Pro_Remedi_3.0_PWR_1.webp?v=1780990777&width=600", "href": "#"}];
 const screen=document.querySelector('.screen');
 screen.appendChild(document.getElementById('tpl-menu').content.cloneNode(true));
 t91Menu(screen);t91Mega(screen);t91Toast(screen);
-const G=[['lv','Livello',['Principianti','Intermedi','Avanzati','Pro']],['st','Stile di gioco',['Potenza','Controllo','Polivalenti']],['co','Collezione',['Holo','Signature Pro','Outlet']],['pz','Prezzo',['Sotto €200','€200 – €330']]];
+const G=[['lv','Livello',['Principianti','Intermedi','Avanzati','Pro']],['st','Stile di gioco',['Potenza','Controllo','Polivalenti']],['co','Collezione',['Holo','Signature Pro']],['pz','Prezzo',['Sotto €200','€200 – €330']]];
 const SLUG={Principianti:'principianti',Intermedi:'intermedi',Avanzati:'avanzati',Pro:'pro',Potenza:'potenza',Controllo:'controllo',Polivalenti:'polivalenti',Holo:'holo','Signature Pro':'signature',Outlet:'outlet','Sotto €200':'sotto-200','€200 – €330':'200-330'};
 const UNSLUG=Object.fromEntries(Object.entries(SLUG).map(([k,v])=>[v,k]));
 const KEY={Principianti:'lv',Intermedi:'lv',Avanzati:'lv',Pro:'lv',Potenza:'st',Controllo:'st',Polivalenti:'st',Holo:'co','Signature Pro':'co',Outlet:'co','Sotto €200':'pz','€200 – €330':'pz'};
@@ -1270,7 +1317,6 @@ function list(){let r=P.filter(x=>match(x,sel));const o=$('rkSort').value;if(o==
 function count(k,v){const s={...sel,[k]:v};return P.filter(x=>match(x,s)).length;}
 function groups(){return G.map(([k,l,opts])=>`<div class="fgrp"><h6>${l}</h6><div class="opts">${opts.map(o=>{const n=count(k,o);return `<button data-k="${k}" data-v="${o}" class="${sel[k]===o?'on':''}" ${n||sel[k]===o?'':'disabled'}>${o}<small>${n}</small></button>`}).join('')}</div></div>`).join('');}
 function title(){const lv=sel.lv,st=sel.st,co=sel.co;
-  if(co==='Outlet')return['Racchette in outlet.','Modelli delle stagioni passate, a prezzo ridotto. Stessa garanzia e reso gratuito.'];
   if(co==='Holo')return['Holo Collection.','La nuova linea Master 6.0: carbonio, potenza e i colori Holo.'];
   if(co==='Signature Pro')return['Signature Pro.','Le racchette progettate insieme ai nostri atleti.'];
   const L={Principianti:'per principianti',Intermedi:'per intermedi',Avanzati:'per giocatori avanzati',Pro:'per professionisti'}[lv]||'';
@@ -1289,7 +1335,7 @@ function render(){
   $('rkCount').textContent=r.length+(r.length===1?' racchetta':' racchette');$('rkSheetOk').textContent='Mostra '+r.length+(r.length===1?' risultato':' risultati');
   $('rkActive').innerHTML=Object.entries(sel).map(([k,v])=>`<button data-rm="${k}">${v}</button>`).join('');
   const cards=r.map((x,i)=>`<a class="r-card" href="${x.href}" style="animation-delay:${Math.min(i,8)*30}ms"><div class="im">${x.b?`<span class="bdg ${x.b==='Signature'?'k':x.b.startsWith('-')?'o':''}">${x.b}</span>`:''}<button class="cmp ${cmp.includes(x.n)?'on':''}" data-c="${x.n}"><i></i>Confronta</button><img src="${x.img}" alt="" loading="lazy"></div><div class="tg"><span>${x.lv}</span><span>${x.st}</span></div><b>${x.n}</b><span class="pr">${eur(x.p)}${x.o?`<s>${eur(x.o)}</s>`:''}<small>o 3 rate da ${eur(x.p/3)} con Klarna</small></span></a>`);
-  const q='<div class="r-quiz"><div><small>Non sai quale scegliere?</small><b><br>Trova la tua racchetta.</b><p>4 domande, il risultato anche su WhatsApp.</p></div><a class="h" href="#">Inizia il test →</a></div>';
+  const q='<div class="r-quiz"><div><small>Non sai quale scegliere?</small><b>Trova la tua racchetta.</b><p>4 domande, il risultato anche su WhatsApp.</p></div><a class="h" href="#">Inizia il test →</a></div>';
   if(!cards.length){$('rkGrid').innerHTML='<div class="r-empty">Nessuna racchetta con questi filtri.<br><button class="js-clear">Rimuovi filtri</button></div>'+q;}
   else{cards.splice(Math.min(6,cards.length),0,q);$('rkGrid').innerHTML=cards.join('');}
   const h=['lv','st','co'].filter(k=>sel[k]).map(k=>SLUG[sel[k]]).join('/');try{if(location.hash.slice(1)!==h)history.replaceState(null,'',h?'#'+h:location.pathname+location.search);}catch(e){}
