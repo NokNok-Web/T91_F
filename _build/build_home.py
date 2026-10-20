@@ -312,7 +312,9 @@ css='''<style>
   .h-wg{grid-template-columns:1fr 1fr;gap:16px}
   .h-wt{aspect-ratio:4/5;border-radius:32px}
   .h-wt span{font-size:88px;left:36px;bottom:32px}
-  .h-pers{grid-template-columns:1.1fr 1fr;margin-top:16px;border-radius:32px;min-height:520px}
+  .h-pers{grid-template-columns:1fr 1fr;column-gap:16px;background:transparent;margin-top:16px;min-height:560px}
+  .h-pers .tx{background:var(--volt);border-radius:32px}
+  .h-pers .vis{border-radius:32px}
   .h-pers .tx{padding:64px;justify-content:center;gap:18px}
   .h-pers h3{font-size:84px}
   .h-pers p{font-size:19px}
