@@ -936,6 +936,43 @@ svg.f{fill:currentColor;stroke:none}
 .p-tile.b .p-grip{background:rgba(255,255,255,.1);color:#fff}
 .p-tile.b .p-grip p{color:rgba(255,255,255,.85)}
 .p-tile.b .p-grip svg path{stroke:#fff}
+
+/* palette */
+.pal{display:grid;gap:12px;margin-top:56px}
+@media(min-width:760px){.pal{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.pal{grid-template-columns:repeat(4,1fr)}}
+.pal .sw{border-radius:28px;padding:26px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.pal .sw .hx{font-family:ui-monospace,Menlo,monospace;font-size:14px;opacity:.75}
+.pal .sw b{display:block;font-size:30px;letter-spacing:-.03em;line-height:1.05;margin-bottom:8px}
+.pal .sw p{font-size:15.5px;line-height:1.45}
+.pal .v{background:#D4FF00;color:#000}
+.pal .b{background:#2541B2;color:#fff}
+.pal .b p{color:rgba(255,255,255,.85)}
+.pal .f{background:#F5F5F7;color:#1D1D1F;box-shadow:inset 0 0 0 1px #E5E5EA}
+.pal .f p{color:#3A3A3C}
+.pal .k{background:#0A0A0A;color:#fff}
+.pal .k p{color:#C7C7CC}
+.pal-mix{margin-top:28px}
+.pal-mix .bar{display:flex;height:22px;border-radius:980px;overflow:hidden;box-shadow:inset 0 0 0 1px #E5E5EA}
+.pal-mix .lg{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px;font-size:14px;color:var(--mute)}
+.pal-mix .lg span{display:inline-flex;align-items:center;gap:8px}
+.pal-mix .lg i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.pal-ex{display:grid;gap:12px;margin-top:40px}
+@media(min-width:900px){.pal-ex{grid-template-columns:repeat(3,1fr)}}
+.pal-ex>div{border-radius:28px;padding:28px;min-height:240px;display:flex;flex-direction:column;gap:10px}
+.pal-ex small{font-size:13px;opacity:.7}
+.pal-ex b{font-size:36px;letter-spacing:-.04em;line-height:1}
+.pal-ex .e1{background:#0A0A0A;color:#fff}
+.pal-ex .e1 b{color:#D4FF00}
+.pal-ex .btn{margin-top:auto;align-self:flex-start;background:#D4FF00;color:#000;border-radius:980px;padding:11px 18px;font-size:15px}
+.pal-ex .e2{background:#2541B2;color:#fff}
+.pal-ex .m{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center;font-size:13px}
+.pal-ex .m i{height:6px;border-radius:3px;background:rgba(255,255,255,.2);position:relative;overflow:hidden}
+.pal-ex .m em{position:absolute;inset:0 auto 0 0;background:#D4FF00}
+.pal-ex .e2 .m:first-of-type{margin-top:auto}
+.pal-ex .e3{background:#F5F5F7;color:#0A0A0A}
+.pal-ex .e3 b{font-size:30px}
+.pal-ex .e3 .pr{margin-top:auto;font-size:26px;letter-spacing:-.02em}
 </style>
 </head>
 <body>
@@ -971,7 +1008,7 @@ svg.f{fill:currentColor;stroke:none}
   <div class="x-wrap">
     <div class="br"><img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='T91'"> Il nuovo sito</div>
     <nav>
-      <a href="#prodotto">Pagina prodotto</a><a href="#funzioni">Pezzo per pezzo</a><a href="#carrello">Carrello</a><a href="#strumenti">Strumenti</a><a href="#servizi">Servizi</a><a href="#team">Team Pro</a><a href="#club">Club</a><a href="#blog">Blog</a><a href="#tempi">Tempi</a>
+      <a href="#palette">Palette</a><a href="#prodotto">Pagina prodotto</a><a href="#funzioni">Pezzo per pezzo</a><a href="#carrello">Carrello</a><a href="#strumenti">Strumenti</a><a href="#servizi">Servizi</a><a href="#team">Team Pro</a><a href="#club">Club</a><a href="#blog">Blog</a><a href="#tempi">Tempi</a>
     </nav>
   </div>
 </div>
@@ -1005,6 +1042,29 @@ svg.f{fill:currentColor;stroke:none}
 
 
 
+
+<!-- PALETTE -->
+<section class="x-sec" id="palette">
+  <div class="x-wrap">
+    <div class="x-center"><span class="x-eye">La palette</span><h2 class="x-h2">Quattro colori.<br>Ognuno con un compito.</h2>
+    <p class="x-sub">Il lime è il segno di T91, il blu ricorda il campo, il grigio chiaro e il nero tengono tutto leggibile.</p></div>
+    <div class="pal">
+      <div class="sw v"><span class="hx">#D4FF00</span><div><b>Lime T91</b><p>Il colore della pallina, acceso al massimo. È il segno di T91: pulsanti, Club, spedizione veloce, quiz.</p></div></div>
+      <div class="sw b"><span class="hx">#2541B2</span><div><b>Blu campo</b><p>Richiama il campo, ma con la stessa tonalità accesa del lime. Si usa poco: un blocco per pagina, sempre accostato al lime.</p></div></div>
+      <div class="sw f"><span class="hx">#F5F5F7</span><div><b>Grigio chiaro</b><p>Leggibilità e chiarezza: fondo delle schede, delle foto prodotto e dei riquadri.</p></div></div>
+      <div class="sw k"><span class="hx">#0A0A0A</span><div><b>Nero</b><p>Testi, titoli e sezioni d'impatto come Team e Servizi.</p></div></div>
+    </div>
+    <div class="pal-mix">
+      <div class="bar"><span style="flex:55;background:#F5F5F7"></span><span style="flex:25;background:#0A0A0A"></span><span style="flex:14;background:#D4FF00"></span><span style="flex:6;background:#2541B2"></span></div>
+      <div class="lg"><span><i style="background:#F5F5F7"></i>Grigio chiaro e bianco · la base</span><span><i style="background:#0A0A0A"></i>Nero · struttura</span><span><i style="background:#D4FF00"></i>Lime · accento principale</span><span><i style="background:#2541B2"></i>Blu · accento raro</span></div>
+    </div>
+    <div class="pal-ex">
+      <div class="e1"><small>Lime su nero</small><b>-30%. Sempre.</b><span class="btn">Scopri il Club</span></div>
+      <div class="e2"><small>Lime su blu</small><b>Come gioca.</b><div class="m"><span>Potenza</span><i><em style="width:100%"></em></i></div><div class="m"><span>Controllo</span><i><em style="width:60%"></em></i></div></div>
+      <div class="e3"><small>Nero su grigio chiaro</small><b>Boss One K12<br>Pro Master 6.0</b><span class="pr">€328,90</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- PDP DEMO -->
 <section class="x-sec" id="prodotto">
