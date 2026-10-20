@@ -29,7 +29,7 @@ lv=[('Principianti','Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?
     ('Intermedi','FinderProMasterK31.webp?v=1791205236','Per crescere, con più controllo'),
     ('Avanzati','BossOneK12Master6.01.webp?v=1791205585','Potenza e risposta secca'),
     ('Pro','HURACANFULLBLACKXEMILIANOIRIART.webp?v=1791215495','Le racchette del Team')]
-levels=''.join(f'<a class="h-lv" href="#"><div class="im"><img src="{C}{i}&width=500" alt=""></div><b>{n}</b><span>{d}</span><em>→</em></a>' for n,i,d in lv)
+levels=''.join(f'<a class="h-lv" href="#" data-link="racchette#{n.lower()}"><div class="im"><img src="{C}{i}&width=500" alt=""></div><b>{n}</b><span>{d}</span><em>→</em></a>' for n,i,d in lv)
 REV=[("FP","Francesco P.","Feeling dal primo momento","Pala solida e ben fatta, il contatto con la pallina dà tanto controllo, e quando serve potenza risponde subito presente.","Huracán 2.0"),
    ("DP","Davide P.","Leggera e super maneggevole","Bilanciamento ottimo, grafica stupenda. La consiglio a chi vuole il massimo del controllo.","Huracán 2.0"),
    ("SC","Stefano C.","Arrivata in un paio di giorni","Mi trovo bene, devo ancora imparare a domarla. Ottima in difesa sui blocchi e sui pallonetti.","Huracán 2.0"),
@@ -46,14 +46,14 @@ body=f'''<div class="p home">
       <span class="ey">Novità · Holo Collection</span>
       <h1>Nata per<br>chiudere<br>il punto.</h1>
       <p>La nuova linea Master 6.0: carbonio, potenza e i colori Holo.</p>
-      <div class="ctas"><a class="h-btn v" href="{PDP}">Scopri la Boss One K12</a><a class="h-btn o" href="#">Tutte le racchette</a></div>
+      <div class="ctas"><a class="h-btn v" href="{PDP}">Scopri la Boss One K12</a><a class="h-btn o" href="#" data-link="racchette">Tutte le racchette</a></div>
     </div>
   </section>
 
   <div class="h-band"><div class="tr"><span>From players to players</span><i>★</i><span>4,9 su 770 recensioni</span><i>★</i><span>Spedita in 24/48h</span><i>★</i><span>120 pro giocano T91</span><i>★</i><span>From players to players</span><i>★</i><span>4,9 su 770 recensioni</span><i>★</i><span>Spedita in 24/48h</span><i>★</i><span>120 pro giocano T91</span><i>★</i></div></div>
 
   <section class="h-sec">
-    <div class="h-tt"><h2>Una racchetta<br>per ogni livello.</h2><a href="#">Vedi tutte le racchette →</a></div>
+    <div class="h-tt"><h2>Una racchetta<br>per ogni livello.</h2><a href="#" data-link="racchette">Vedi tutte le racchette →</a></div>
     <div class="h-lvs">{levels}</div>
   </section>
 
@@ -355,5 +355,5 @@ screen.querySelectorAll('.h-sec').forEach(sec=>{
 </script>
 '''
 out=head+css+'</head>\n<body>\n'+svg+'\n<div class="screen"><div class="scroller">\n'+body+'</div></div>\n<template id="tpl-menu">\n'+S.MENU+'</template>\n'+js+'</body>\n</html>\n'
-out=out.replace('href="#" data-link="home"','href="T91_mockup_homepage.html" data-link="home"')
+out=S.link_fix(out)
 open('T91_mockup_homepage.html','w').write(out); print('home built',len(out))

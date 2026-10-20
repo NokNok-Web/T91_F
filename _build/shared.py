@@ -4,10 +4,10 @@ TOPBAR='''  <div class="p-top"><div class="l"><a href="#">Outlet</a><a href="#">
 '''
 MEGA='''    <div class="p-mega">
       <div class="mg" data-k="racchette">
-        <div class="c"><a class="all" href="#"><b>Tutte le racchette</b><span>14 modelli · con i filtri</span><em>→</em></a><a class="mini" href="#">Confronta le racchette →</a></div>
-        <div class="c"><h6>Per livello</h6><a href="#">Principianti</a><a href="#">Intermedi</a><a href="#">Avanzati</a><a href="#">Pro</a></div>
-        <div class="c"><h6>Per stile di gioco</h6><a href="#">Potenza</a><a href="#">Controllo</a><a href="#">Polivalenti</a></div>
-        <div class="c tiles"><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=500" alt=""><span>Holo Collection</span></a><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=500" alt=""><span>Signature Pro</span></a><a class="t v" href="#"><small>4 domande</small>Trova la tua racchetta</a></div>
+        <div class="c"><a class="all" href="#" data-link="racchette"><b>Tutte le racchette</b><span>Tutti i modelli, con i filtri</span><em>→</em></a><a class="mini" href="#">Confronta le racchette →</a></div>
+        <div class="c"><h6>Per livello</h6><a href="#" data-link="racchette#principianti">Principianti</a><a href="#" data-link="racchette#intermedi">Intermedi</a><a href="#" data-link="racchette#avanzati">Avanzati</a><a href="#" data-link="racchette#pro">Pro</a></div>
+        <div class="c"><h6>Per stile di gioco</h6><a href="#" data-link="racchette#potenza">Potenza</a><a href="#" data-link="racchette#controllo">Controllo</a><a href="#" data-link="racchette#polivalenti">Polivalenti</a></div>
+        <div class="c tiles"><a class="t img" href="#" data-link="racchette#holo"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=500" alt=""><span>Holo Collection</span></a><a class="t img" href="#" data-link="racchette#signature"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=500" alt=""><span>Signature Pro</span></a><a class="t v" href="#"><small>4 domande</small>Trova la tua racchetta</a></div>
       </div>
       <div class="mg" data-k="abbigliamento">
         <div class="c"><a class="all" href="#"><b>Tutto l'abbigliamento</b><span>Con i filtri per capo, taglia e colore</span><em>→</em></a><a class="mini" href="#">Personalizzabili →</a></div>
@@ -84,13 +84,13 @@ MENU=f'''<div class="p-mm">
     <div class="pane l2" data-pane="racchette">
       <button class="back js-mback"><svg class="i"><use href="#i-l"/></svg>Menu</button>
       <h4>Racchette</h4>
-      <a class="all" href="#"><span><b>Vedi tutte le racchette</b><span>14 modelli, con i filtri</span></span><em>→</em></a>
+      <a class="all" href="#" data-link="racchette"><span><b>Vedi tutte le racchette</b><span>Tutti i modelli, con i filtri</span></span><em>→</em></a>
       <div class="m-sec" style="margin-top:0">Per livello</div>
-      <div class="chips"><a href="#">Principianti</a><a href="#">Intermedi</a><a href="#">Avanzati</a><a href="#">Pro</a></div>
+      <div class="chips"><a href="#" data-link="racchette#principianti">Principianti</a><a href="#" data-link="racchette#intermedi">Intermedi</a><a href="#" data-link="racchette#avanzati">Avanzati</a><a href="#" data-link="racchette#pro">Pro</a></div>
       <div class="m-sec">Per stile di gioco</div>
-      <div class="chips"><a href="#">Potenza</a><a href="#">Controllo</a><a href="#">Polivalenti</a></div>
+      <div class="chips"><a href="#" data-link="racchette#potenza">Potenza</a><a href="#" data-link="racchette#controllo">Controllo</a><a href="#" data-link="racchette#polivalenti">Polivalenti</a></div>
       <div class="m-sec">Collezioni</div>
-      <div class="cols2"><a class="coll" href="#"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=400" alt=""><span>Holo</span></a><a class="coll" href="#"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=400" alt=""><span>Signature Pro</span></a></div>
+      <div class="cols2"><a class="coll" href="#" data-link="racchette#holo"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=400" alt=""><span>Holo</span></a><a class="coll" href="#" data-link="racchette#signature"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=400" alt=""><span>Signature Pro</span></a></div>
       <div class="cards2"><a class="v" href="#"><small>4 domande</small>Trova la tua racchetta</a><a class="f" href="#"><small>Fianco a fianco</small>Confronta le racchette</a></div>
     </div>
     <div class="pane l2" data-pane="abbigliamento">
@@ -260,3 +260,12 @@ function t91Toast(host){
   host.addEventListener('click',e=>{const a=e.target.closest('a');if(!a||a.getAttribute('href')!=='#')return;e.preventDefault();if(a.dataset.link)return;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1800);});
 }
 '''
+
+LINKS={'home':'T91_mockup_homepage.html','racchette':'T91_mockup_racchette.html','pdp':'T91_mockup_pagina_prodotto.html'}
+def link_fix(html):
+    import re
+    def f(m):
+        k=m.group(1); base,_,h=k.partition('#')
+        if base not in LINKS: return m.group(0)
+        return 'href="'+LINKS[base]+('#'+h if h else '')+'" data-link="'+k+'"'
+    return re.sub(r'href="#" data-link="([^"]+)"',f,html)

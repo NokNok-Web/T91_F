@@ -8,5 +8,7 @@ js=src[src.index('<script>'):src.index('</script>')]
 cut=js.index('tick();setInterval(tick,1000);')+len('tick();setInterval(tick,1000);')
 js=js[:cut]+"\n})();\n"
 out=head+'<style>html,body{height:100%;overflow:hidden}.screen{position:fixed!important;inset:0;width:100%;height:100%}</style>\n</head>\n<body>\n'+svg+'\n<div class="screen" data-screen><div class="scroller"></div></div>\n'+tpls+js+'</script>\n</body>\n</html>\n'
-out=out.replace('href="#" data-link="home"','href="T91_mockup_homepage.html" data-link="home"')
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+import shared as S
+out=S.link_fix(out)
 open('T91_mockup_pagina_prodotto.html','w').write(out); print('built',len(out))
