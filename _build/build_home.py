@@ -162,9 +162,9 @@ css='''<style>
 .h-hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
 /* fascia volt */
 .h-band{background:var(--volt);overflow:hidden;white-space:nowrap;border-bottom:1px solid #000}
-.h-band .tr{display:inline-flex;align-items:center;gap:24px;padding:16px 0;animation:marq 30s linear infinite}
-.h-band span{font-size:26px;letter-spacing:-.03em;text-transform:uppercase}
-.h-band i{font-style:normal;font-size:16px}
+.h-band .tr{display:inline-flex;align-items:center;gap:18px;padding:10px 0;animation:marq 30s linear infinite}
+.h-band span{font-size:16px;letter-spacing:.02em;text-transform:uppercase}
+.h-band i{font-style:normal;font-size:11px}
 @media (prefers-reduced-motion:reduce){.h-band .tr{animation:none}}
 .h-sec{padding:56px 20px}
 /* livelli */
@@ -292,8 +292,8 @@ css='''<style>
   .h-hero .tx{padding:0 0 0 80px;max-width:640px}
   .h-hero h1{font-size:112px}
   .h-hero p{font-size:20px}
-  .h-band span{font-size:40px}
-  .h-band .tr{padding:22px 0;gap:36px}
+  .h-band span{font-size:20px}
+  .h-band .tr{padding:12px 0;gap:24px}
   .h-sec{padding:112px 80px}
   .h-lvs{grid-template-columns:repeat(4,1fr);gap:16px}
   .h-lv{padding:24px;border-radius:28px}
