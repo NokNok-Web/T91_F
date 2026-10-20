@@ -341,11 +341,12 @@ css='''<style>
   .h-sg .s1 b{font-size:72px}
   .h-sg .tx>span{font-size:17px}
   .h-vibe{min-height:860px}
-  .h-vibe img{object-position:50% 20%}
-  .h-vibe::after{background:linear-gradient(90deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,0) 70%)}
+  .h-vibe img{left:42%;width:58%;object-position:50% 22%}
+  .h-vibe::after{background:linear-gradient(90deg,#000 0%,#000 42%,rgba(0,0,0,.6) 50%,rgba(0,0,0,0) 62%)}
   .h-vibe{align-items:center}
   .h-vibe .tx{padding:0 0 0 80px}
-  .h-vibe h2{font-size:96px}
+  .h-vibe .tx{max-width:620px}
+  .h-vibe h2{font-size:84px}
   .h-vibe p{font-size:20px}
   .h-club{margin:112px 80px 0;flex-direction:row;align-items:center;justify-content:space-between;padding:72px 72px;border-radius:40px}
   .h-club::before{font-size:420px;right:-30px;bottom:-110px}
