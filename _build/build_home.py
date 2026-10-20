@@ -7,20 +7,23 @@ head=src[:src.index('</head>')].replace('<title>Il nuovo T91</title>','<title>T9
 svg=src[src.index('<svg width="0"'):src.index('</svg>',src.index('<svg width="0"'))+6]
 import base64
 b64=lambda f:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode()
-HD=b64('img/hero-desktop.jpg'); HM=b64('img/hero-mobile.jpg')
+HD=b64('img/hero-desktop.jpg')
 n1=re.search(r'src="(data:image/jpeg;base64,[^"]+)"',src).group(1)
 C=S.CDN; PDP='T91_mockup_pagina_prodotto.html'
-def card(name,img,price,badge='',link='#',old='',sub=''):
-    b=f'<span class="bdg{" k" if badge in ("Signature","Bestseller") else ""}">{badge}</span>' if badge else ''
+def card(name,img,price,badge='',link='#',old='',sub='',cat=''):
+    b=f'<span class="bdg{" k" if badge in ("Signature","Il più venduto") else ""}">{badge}</span>' if badge else ''
     o=f'<s>{old}</s> ' if old else ''
-    return f'<a class="p-card" href="{link}"><div class="im">{b}<img src="{C}{img}&width=500" alt=""></div><b>{name}</b><span class="pr">{o}{price}<small>{sub}</small></span></a>'
+    c=f'<small class="cat">{cat}</small>' if cat else ''
+    return f'<a class="p-card" href="{link}"><div class="im">{b}<img src="{C}{img}&width=500" alt=""></div>{c}<b>{name}</b><span class="pr">{o}{price}<small>{sub}</small></span></a>'
 best=''.join([
- card('Boss One K12 Pro Master 6.0','BossOneK12Master6.01.webp?v=1791205585','€328,90','Novità',PDP,sub='o 3 × €109,63 con Klarna'),
- card('Mystery Box · racchetta garantita','Mistery_Livello_3.2.webp?v=1773227101','da €300,00','Bestseller',old='€740,00',sub='Il più venduto'),
- card('Huracán 2.0','Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628','€328,90',sub='o 3 × €109,63 con Klarna'),
- card('Huracán Full Black x Iriart 3.0','HURACANFULLBLACKXEMILIANOIRIART.webp?v=1791215495','€328,90','Signature',sub='o 3 × €109,63 con Klarna'),
- card('Finder Pro Master K3','FinderProMasterK31.webp?v=1791205236','€328,90','Novità',sub='o 3 × €109,63 con Klarna'),
- card('Boss One K3 Pro Master','BossOneK3Master6.01.webp?v=1791205374','€328,90','Novità',sub='o 3 × €109,63 con Klarna'),
+ card('Mystery Box · racchetta garantita','Mistery_Livello_3.2.webp?v=1773227101','da €300,00','Il più venduto',old='€740,00',cat='Mystery Box'),
+ card('Huracán 2.0','Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628','€328,90',sub='o 3 × €109,63 con Klarna',cat='Racchetta'),
+ card('Borsa isotermica XL 2.0','BorsoneXLArancione1.webp?v=1788959393','€129,90','Preordine',cat='Borsa'),
+ card('Boss One K12 Pro Master 6.0','BossOneK12Master6.01.webp?v=1791205585','€328,90','Novità',PDP,sub='o 3 × €109,63 con Klarna',cat='Racchetta'),
+ card('T-shirt Premium Performance','T-shirt_rosa_1_5f220f5e-2edd-484a-923a-0c4b7c06e8b6.webp?v=1713189215','€56,90',cat='Abbigliamento donna'),
+ card('Halo T-shirt con il tuo nome','T-shirt_rosa_grigio_2_pers.webp?v=1779469145','€59,90','Personalizzabile',cat='Abbigliamento uomo'),
+ card('Gonna Premium Performance','Gonna_Indaco_1.webp?v=1788874382','€42,90',cat='Abbigliamento donna'),
+ card('Ultra Performance Cap 2.0','T91ULTRACAPNERO.webp?v=1775209993','€28,90',cat='Accessori'),
 ])
 lv=[('Principianti','Huracan_2.0_Nera_d0923663-c471-4cd0-b0a6-536e9564d7a8.webp?v=1766168628','Leggere e facili da gestire'),
     ('Intermedi','FinderProMasterK31.webp?v=1791205236','Per crescere, con più controllo'),
@@ -38,7 +41,6 @@ body=f'''<div class="p home">
 {S.TOPBAR}  <div class="p-bar"><div class="p-marq"><span>⚡ SPEDIZIONE GRATUITA 24/48H</span><span>· RESO GRATUITO 30 GIORNI</span><span>· PAGA IN 3 RATE CON KLARNA</span><span>· T91 CLUB: -30% SEMPRE</span><span>⚡ SPEDIZIONE GRATUITA 24/48H</span><span>· RESO GRATUITO 30 GIORNI</span><span>· PAGA IN 3 RATE CON KLARNA</span><span>· T91 CLUB: -30% SEMPRE</span></div></div>
 {S.HEAD('')}
   <section class="h-hero">
-    <img class="bg m" src="{HM}" alt="Giocatore T91 al servizio">
     <img class="bg d" src="{HD}" alt="Giocatore T91 al servizio in torneo">
     <div class="tx">
       <span class="ey">Novità · Holo Collection</span>
@@ -59,7 +61,7 @@ body=f'''<div class="p home">
   </section>
 
   <section class="h-sec">
-    <div class="p-sh"><h2>Le più vendute.</h2>{NAV(0,0)}</div>
+    <div class="p-sh"><h2>I più venduti.</h2>{NAV(0,0)}</div>
     <div class="h-car"><div class="h-track">{best}</div></div>
   </section>
 
@@ -130,8 +132,7 @@ css='''<style>
 .ey{display:block;font-size:13px;color:var(--mute);margin-bottom:8px}
 .h-hero{position:relative;background:#000;color:#fff;min-height:640px;display:flex;align-items:flex-end;overflow:hidden}
 .h-hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.h-hero .bg.m{object-position:50% 20%}
-.h-hero .bg.d{display:none}
+.h-hero .bg.d{object-position:46% 30%}
 .h-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.85) 88%)}
 .h-hero .tx{position:relative;z-index:1;padding:28px 20px 36px}
 .h-hero .ey{color:var(--volt)}
@@ -166,6 +167,7 @@ css='''<style>
 .h-track .p-card{width:220px}
 .h-track .p-rc{width:280px}
 .p-card s{color:var(--mute);font-size:12px;margin-right:2px}
+.p-card .cat{font-size:12px;color:var(--mute);margin-bottom:-2px}
 .h-wg{display:grid;gap:10px}
 .h-wt{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:#111;display:block}
 .h-wt img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
@@ -213,8 +215,7 @@ css='''<style>
 .home .p-sg div{min-height:170px}
 @container dev (min-width: 900px){
   .h-hero{min-height:720px;align-items:center}
-  .h-hero .bg.m{display:none}
-  .h-hero .bg.d{display:block;width:128%;right:auto;object-position:50% 25%}
+  .h-hero .bg.d{width:128%;right:auto;object-position:50% 25%}
   .h-hero::after{background:linear-gradient(90deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,.35) 38%,rgba(0,0,0,0) 60%)}
   .h-hero .tx{padding:0 0 0 80px;max-width:560px}
   .h-hero h1{font-size:68px}
