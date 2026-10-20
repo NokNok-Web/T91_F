@@ -1048,9 +1048,9 @@ svg.f{fill:currentColor;stroke:none}
 .h-pers .ey{color:#333;margin:0}
 .h-pers h3{font-weight:400;font-size:42px;line-height:.95;letter-spacing:-.05em}
 .h-pers p{font-size:16px;color:#222;max-width:420px}
-.h-pers .vis{position:relative;background:#fff;aspect-ratio:1/1;display:grid;place-items:center}
-.h-pers .vis img{width:86%;height:86%;object-fit:contain}
-.h-pers .tag{position:absolute;right:16px;top:16px;background:#000;color:var(--volt);font-size:15px;letter-spacing:.02em;padding:8px 14px;border-radius:12px;transform:rotate(4deg)}
+.h-pers .vis{position:relative;background:#F1F1F1;aspect-ratio:1/1;overflow:hidden}
+.h-pers .vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.h-pers .tag{position:absolute;left:16px;bottom:16px;background:#000;color:var(--volt);font-size:13px;padding:7px 12px;border-radius:980px}
 /* team */
 .h-team{background:#000;color:#fff;padding:56px 20px}
 .h-team .h-tt>a{color:#fff}
@@ -1152,8 +1152,8 @@ svg.f{fill:currentColor;stroke:none}
   .h-pers .tx{padding:64px;justify-content:center;gap:18px}
   .h-pers h3{font-size:84px}
   .h-pers p{font-size:19px}
-  .h-pers .vis{aspect-ratio:auto}
-  .h-pers .tag{font-size:18px;right:32px;top:32px;padding:10px 16px}
+  .h-pers .vis{aspect-ratio:auto;min-height:100%}
+  .h-pers .tag{left:28px;bottom:28px;font-size:14px;padding:8px 14px}
   .h-team{padding:112px 80px}
   .h-tg{grid-template-columns:1.45fr 1fr;gap:16px}
   .h-feat{aspect-ratio:auto;min-height:640px;border-radius:32px}
