@@ -1076,7 +1076,7 @@ svg.f{fill:currentColor;stroke:none}
 .fgrp button.on small{color:#A1A1A6}
 .fgrp button:disabled{opacity:.35;cursor:default}
 @container dev (min-width: 900px){
-  .r-hero{padding:8px 40px 28px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px}
+  .r-hero{padding:8px 40px 32px}
   .r-hero h1{font-size:72px}
   .r-hero p{font-size:18px}
   .r-hero .sc{grid-column:1/-1;margin:8px 0 0;padding:0;flex-wrap:wrap}
@@ -1174,7 +1174,6 @@ html,body{height:100%;overflow:hidden}
   <div class="p-crumbs"><a href="T91_mockup_homepage.html" data-link="home">Home</a><i>/</i><b id="rkCrumb">Racchette</b></div>
   <section class="r-hero">
     <div class="tx"><h1 id="rkTitle">Racchette da padel.</h1><p id="rkDesc">Tutte le racchette T91, dal primo match al torneo. Filtra per livello e stile di gioco, o fatti consigliare dal test.</p><span class="url" id="rkUrl">t91padel.com/racchette</span></div>
-    <div class="sc" id="rkShort"></div>
   </section>
   <section class="r-body">
     <aside class="r-side" id="rkSide"></aside>
@@ -1329,7 +1328,6 @@ function render(){
   const segs=['lv','st','co'].filter(k=>sel[k]).map(k=>'<b>'+SLUG[sel[k]]+'</b>');
   $('rkUrl').innerHTML='t91padel.com/racchette'+(segs.length?'/'+segs.join('/'):'')+(sel.pz?'?prezzo=<b>'+SLUG[sel.pz]+'</b>':'');
   $('rkCrumb').textContent=segs.length||sel.pz?t.replace('.',''):'Racchette';
-  $('rkShort').innerHTML=['Principianti','Intermedi','Avanzati','Pro'].map(v=>`<button data-k="lv" data-v="${v}" class="${sel.lv===v?'on':''}">${v}</button>`).join('')+'<span class="sep"></span>'+['Potenza','Controllo','Polivalenti'].map(v=>`<button data-k="st" data-v="${v}" class="${sel.st===v?'on':''}">${v}</button>`).join('');
   const g=groups();$('rkSide').innerHTML=g+(Object.keys(sel).length?'<button class="r-fbtn js-clear" style="display:inline-flex;margin-top:14px">Rimuovi filtri</button>':'');$('rkSheet').innerHTML=g;
   const n=Object.keys(sel).length;$('rkFc').textContent=n||'';
   $('rkCount').textContent=r.length+(r.length===1?' racchetta':' racchette');$('rkSheetOk').textContent='Mostra '+r.length+(r.length===1?' risultato':' risultati');
