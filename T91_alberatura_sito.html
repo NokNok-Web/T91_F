@@ -240,6 +240,56 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 .col.k{background:#000;color:#F5F5F7}
 .col.k li{border-color:#2C2C2E}
 .col.k .lk,.col.k .sb{color:#8E8E93}
+
+/* scheletro pagine */
+.sk{display:grid;gap:16px;margin-top:56px}
+@media(min-width:1000px){.sk{grid-template-columns:220px 1fr;gap:24px;align-items:start}}
+.sk-tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.sk-tabs::-webkit-scrollbar{display:none}
+@media(min-width:1000px){.sk-tabs{flex-direction:column;position:sticky;top:72px;overflow:visible}}
+.sk-tabs button{font:inherit;flex:none;text-align:left;font-size:15px;padding:10px 16px;border-radius:14px;border:0;background:var(--fog);cursor:pointer;color:var(--ink2)}
+.sk-tabs button small{display:block;font-size:12px;color:var(--mute)}
+.sk-tabs button.on{background:#000;color:#fff}
+.sk-tabs button.on small{color:#A1A1A6}
+.sk-main{background:var(--fog);border-radius:28px;padding:24px}
+@media(min-width:900px){.sk-main{padding:36px}}
+.sk-head{display:flex;flex-direction:column;gap:6px;margin-bottom:24px}
+.sk-head b{font-size:clamp(26px,3vw,36px);letter-spacing:-.025em;display:block;line-height:1.1}
+.sk-head span{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--mute)}
+.sk-head p{font-size:17px;color:#3A3A3C;max-width:640px}
+.sk-grid{display:grid;gap:20px}
+@media(min-width:900px){.sk-grid{grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}}
+.sk-wire{list-style:none;display:flex;flex-direction:column;gap:8px;counter-reset:b}
+.sk-wire li{background:#fff;border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:28px 1fr;gap:4px 12px;align-items:start;animation:skin .3s ease both}
+.sk-wire li::before{counter-increment:b;content:counter(b);grid-row:span 3;width:26px;height:26px;border-radius:50%;background:var(--fog);display:grid;place-items:center;font-size:12px;color:var(--mute)}
+.sk-wire li b{font-size:16.5px;letter-spacing:-.01em}
+.sk-wire li p{font-size:14px;color:var(--mute);grid-column:2}
+.sk-wire li .to{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.sk-wire li.shero{background:#000;color:#fff;min-height:96px}
+.sk-wire li.shero p{color:#A1A1A6}
+.sk-wire li.shero::before{background:#2C2C2E;color:#A1A1A6}
+.sk-wire li.cta{background:var(--volt)}
+.sk-wire li.cta p{color:#333}
+.sk-wire li.cta::before{background:rgba(0,0,0,.08);color:#333}
+@keyframes skin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.lnk{font:inherit;font-size:12.5px;border-radius:980px;padding:4px 10px;border:1px solid var(--line);background:#fff;color:var(--ink2);cursor:pointer;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.lnk::after{content:"→";color:var(--mute)}
+.lnk.go{border-color:#000}
+.lnk.go:hover{background:#000;color:#fff}
+.lnk.go:hover::after{color:var(--volt)}
+.lnk.ext{cursor:default;color:var(--mute)}
+.lnk.ext::after{content:""}
+.shero .lnk{background:#1D1D1F;border-color:#3A3A3C;color:#fff}
+.shero .lnk.go:hover{background:var(--volt);color:#000}
+.cta .lnk{background:#000;color:#fff;border-color:#000}
+.sk-side{display:flex;flex-direction:column;gap:12px}
+@media(min-width:900px){.sk-side{position:sticky;top:72px}}
+.sk-box{background:#fff;border-radius:18px;padding:18px}
+.sk-box h5{font-weight:400;font-size:13px;color:var(--mute);margin-bottom:10px}
+.sk-chips{display:flex;flex-wrap:wrap;gap:6px}
+.sk-legend span{display:flex;align-items:center;gap:10px;font-size:14px;padding:3px 0}
+.sk-legend i{width:22px;height:14px;border-radius:4px;display:inline-block}
+.lg-hero{background:#000}.lg-cta{background:var(--volt)}.lg-blk{background:var(--fog);box-shadow:inset 0 0 0 1px var(--line)}
 .foot{background:var(--fog);color:var(--mute);font-size:12px;padding:28px 0;border-top:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .foot a{text-decoration:underline}
@@ -354,7 +404,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 
 <div class="nav"><div class="wrap">
   <div class="br"><img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='T91'"> Alberatura del sito</div>
-  <nav><a href="#oggi">Oggi</a><a href="#menu">Il nuovo menu</a><a href="#albero">L'albero</a><a href="#mobile">Da mobile</a><a href="#filtri">Filtri</a><a href="#percorsi">Collegamenti</a><a href="#domande">Decisioni</a><a href="index.html">← Indice</a></nav>
+  <nav><a href="#oggi">Oggi</a><a href="#menu">Il nuovo menu</a><a href="#albero">L'albero</a><a href="#mobile">Da mobile</a><a href="#filtri">Filtri</a><a href="#scheletro">Scheletro pagine</a><a href="#percorsi">Percorsi</a><a href="#domande">Decisioni</a><a href="index.html">← Indice</a></nav>
 </div></div>
 
 <header class="hero"><div class="wrap">
@@ -400,17 +450,13 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
       <div class="promo"><div class="a"><small>4 domande</small>Trova la tua T91</div><div class="b"><small>Fianco a fianco</small>Confronta le pale</div></div>
     </div>
   </div>
-  <div class="mm-note">
-    <div><b>Nessuno è obbligato a scegliere</b><p>Cliccando "Racchette" si arriva sempre a tutte le racchette. Livello e gioco sono solo scorciatoie per chi sa già cosa cerca. Chi non ha mai comprato una pala ha anche il quiz.</p></div>
-    <div><b>Centri e maestri: un link chiaro</b><p>Non una voce tra le altre, ma una frase con freccia a destra della barra: "Sei un centro o un maestro? Scopri il programma →". Porta alla pagina dedicata ed è ripetuto nel footer.</p></div>
-    <div><b>Su mobile</b><p>Toccando Racchette, la prima riga è "Vedi tutte le racchette", poi le scorciatoie. Il link per centri e maestri sta in fondo al menu, con lingua e account. <a href="#mobile" style="text-decoration:underline">Guardalo qui sotto ↓</a></p></div>
-  </div>
+
 </div></section>
 
 <!-- MENU MOBILE -->
 <section class="sec fog mob" id="mobile"><div class="wrap">
-  <div class="center"><span class="eye">Il menu dal telefono</span><h2>E dal telefono?</h2>
-  <p class="sub">L'87,7% delle visite arriva da smartphone: il menu deve funzionare prima di tutto lì. Ecco i tre passaggi. Ogni telefono è cliccabile.</p></div>
+  <div class="center"><span class="eye">Il menu dal telefono</span><h2>Menu mobile</h2>
+ </div>
   <div class="phones">
     <div class="ph-col">
       <div class="ph-cap"><span class="n">1</span><b>La pagina</b><span>Tocca le tre linee in alto a sinistra</span></div>
@@ -427,16 +473,12 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
   </div>
   <p class="tip">Provate a toccare Abbigliamento, Accessori, Team o Servizi nel secondo telefono.</p>
 
-  <div class="notes">
-    <div class="note"><b>Tutto con il pollice</b><p>Voci grandi, una sotto l'altra. Ogni voce con la freccia apre il suo sottomenu, e "Menu" in alto torna indietro.</p></div>
-    <div class="note"><b>Nessuno è obbligato a scegliere</b><p>In ogni sottomenu il primo pulsante è sempre "Vedi tutte" o "Vedi tutto". Livello, stile e collezioni sono solo scorciatoie.</p></div>
-    <div class="note"><b>La seconda barra, in fondo</b><p>Offerte, centri e maestri, lingua e WhatsApp stanno sotto le voci principali: sempre presenti, senza distrarre chi compra.</p></div>
-  </div>
+ 
 </div></section>
 
 <!-- FILTRI -->
 <section class="sec" id="filtri"><div class="wrap">
-  <div class="center"><span class="eye">Una pagina, tanti filtri</span><h2>Si parte da tutte.<br>I filtri fanno il resto.</h2>
+  <div class="center"><span class="eye">Una pagina, tanti filtri</span><h2>Si vedono tutte le racchette.<br>Sono filtrabili.</h2>
   <p class="sub">Racchette e accessori funzionano allo stesso modo: si vedono tutti i prodotti, e ogni filtro scelto cambia l'indirizzo della pagina. Così ogni combinazione importante ha un link da condividere e da far trovare a Google. Provate qui sotto.</p></div>
   <div class="fdemo">
     <div class="fd-url"><span class="lock">●</span><span id="fdUrl">t91padel.com/racchette</span></div>
@@ -465,9 +507,29 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
     
 </div></section>
 
+<!-- SCHELETRO -->
+<section class="sec" id="scheletro"><div class="wrap">
+  <div class="center"><span class="eye">Lo scheletro delle pagine</span><h2>Cosa c'è in ogni pagina.<br>E dove porta.</h2>
+  <p class="sub">Scegliete una pagina: vedete i suoi blocchi dall'alto in basso e dove manda ognuno. Toccando una destinazione si passa a quella pagina.</p></div>
+  <div class="sk">
+    <div class="sk-tabs" id="skTabs"></div>
+    <div class="sk-main">
+      <div class="sk-head"><div><b id="skTitle"></b><span id="skUrl"></span></div><p id="skGoal"></p></div>
+      <div class="sk-grid">
+        <ol class="sk-wire" id="skWire"></ol>
+        <div class="sk-side">
+          <div class="sk-box"><h5>Ci si arriva da</h5><div class="sk-chips" id="skFrom"></div></div>
+          <div class="sk-box"><h5>Porta a</h5><div class="sk-chips" id="skTo"></div></div>
+          <div class="sk-box sk-legend"><h5>Legenda</h5><span><i class="lg-hero"></i>Apertura</span><span><i class="lg-cta"></i>Azione principale</span><span><i class="lg-blk"></i>Blocco di contenuto</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
 <!-- PERCORSI -->
 <section class="sec dark" id="percorsi"><div class="wrap">
-  <div class="center"><span class="eye">Come si collegano</span><h2>Ogni pagina<br>porta alla prossima.</h2>
+  <div class="center"><span class="eye">Come si collegano</span><h2>Il percorso<br>degli utenti.</h2>
   <p class="sub">Il 72% delle visite entra da una pagina interna, non dalla home. Per questo ogni pagina ha sempre un passo successivo verso l'acquisto. Ecco i percorsi principali.</p></div>
   <div class="paths">
     <div class="path"><div class="ti">Da Google, chi cerca la prima racchetta</div><div class="why">Ricerca non-brand, utente che non conosce T91.</div>
@@ -633,6 +695,110 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
   });
   function fit(){document.querySelectorAll('.mob [data-fit]').forEach(w=>{const d=w.firstElementChild;const s=Math.min(1,w.clientWidth/414);d.style.transform=`scale(${s})`;w.style.height=(d.offsetHeight*s)+'px';});}
   addEventListener('resize',fit);fit();document.fonts&&document.fonts.ready.then(fit);
+})();
+</script>
+
+<script>
+(function(){
+const P={
+ home:{t:'Home',u:'t91padel.com',g:'Presenta il brand e smista: chi sa cosa vuole va dritto ai prodotti, chi non lo sa trova il quiz.',
+  from:['Google (ricerca "T91")','Social e pubblicità','Logo in ogni pagina'],
+  b:[['shero','Apertura: collezione del momento','Una foto grande e un messaggio. Cambia con i lanci.',['racchette','scheda']],
+     ['','Racchette per livello','Quattro riquadri: principianti, intermedi, avanzati, pro.',['racchette']],
+     ['cta','Trova la tua T91','Il quiz in 4 domande, per chi non sa da dove partire.',['quiz']],
+     ['','Le più vendute','Carosello di racchette.',['scheda']],
+     ['','Abbigliamento Uomo e Donna','Due riquadri grandi con foto.',['abbigliamento']],
+     ['','Il Team','Carosello degli atleti.',['team','atleta']],
+     ['','I servizi','Care, Repair, Protezione, Personalizza.',['servizio']],
+     ['','T91 Club','-30% sempre: banner con il vantaggio.',['club']],
+     ['','Recensioni','4,9 su 770 recensioni, carosello.',[]],
+     ['','Dal blog','Ultimi tre articoli.',['articolo']],
+     ['','Trova T91 vicino a te · Centri e maestri','Mappa dei centri e programma per professionisti.',['x:Trova T91','x:Centri e maestri']]]},
+ racchette:{t:'Racchette',u:'t91padel.com/racchette',g:'Mostra tutte le racchette e aiuta a restringere la scelta. Con i filtri diventa /racchette/principianti, /racchette/potenza…',
+  from:['Home','Menu','Articoli del blog','Google e pubblicità'],
+  b:[['shero','Titolo e due righe di testo','Cambia con il filtro: "Racchette per principianti"…',[]],
+     ['','Scorciatoie','Livello e stile di gioco, come etichette.',['racchette']],
+     ['','Filtri e ordinamento','Livello, stile, collezione, prezzo.',[]],
+     ['','Griglia delle racchette','Foto, nome, prezzo, rata Klarna, "confronta".',['scheda','confronta']],
+     ['cta','A metà griglia: Trova la tua T91','Per chi scorre senza decidere.',['quiz']],
+     ['','Guida alla scelta','Link all\'articolo "Come scegliere la racchetta".',['articolo']],
+     ['','Testo e domande frequenti','In fondo: aiuta Google e chi ha dubbi.',[]]]},
+ scheda:{t:'Scheda racchetta',u:'t91padel.com/racchette/boss-one-k12-pro-master-6-0',g:'Convince a comprare. È la pagina già disegnata nel mockup.',
+  from:['Racchette','Home','Scheda atleta','Articoli del blog','Google e pubblicità'],
+  b:[['shero','Foto e acquisto','Galleria, prezzo, rate, peso, spedizione, "Aggiungi al carrello".',['carrello','club']],
+     ['','Fascia N.1','L\'atleta che la gioca.',['atleta']],
+     ['','Recensioni','Media, sintesi, carosello.',[]],
+     ['','Tecnologia, video, specifiche','Zoom, "3 cose da sapere", tabella.',[]],
+     ['cta','Il set del pro','Video e "acquista il set".',['carrello']],
+     ['','Comprati insieme · Completa il look','Accessori e abbigliamento abbinati.',['abbigliamento']],
+     ['','Confronta','Quattro racchette affiancate e quiz.',['confronta','quiz']],
+     ['','Racchette simili','Stesso livello.',['scheda']],
+     ['','Servizi','Care, Repair, Click & Collect, Personalizza.',['servizio']],
+     ['','Dal blog','Articoli collegati.',['articolo']]]},
+ abbigliamento:{t:'Abbigliamento',u:'t91padel.com/abbigliamento/uomo',g:'Tutti i capi, filtrabili per uomo/donna, tipo, taglia e colore.',
+  from:['Home','Menu','Scheda racchetta (completa il look)'],
+  b:[['shero','Titolo e collezione del momento','Foto di stagione.',[]],
+     ['','Uomo · Donna · Personalizzabili','Scorciatoie in alto.',['abbigliamento']],
+     ['','Filtri','Tipo di capo, taglia, colore.',[]],
+     ['','Griglia dei capi','Tutti i colori nella stessa scheda.',['x:Scheda capo']],
+     ['cta','Personalizza con il tuo nome','Anche un pezzo solo.',['servizio']],
+     ['','Il look dei pro','Cosa indossa il Team.',['team']],
+     ['','Completa con la racchetta','Per chi compra solo abbigliamento.',['racchette']]]},
+ servizio:{t:'Pagina servizio',u:'t91padel.com/servizi/repair',g:'Spiega un servizio e porta a usarlo. Stesso modello per Care, Repair, Protezione, Personalizza e Click & Collect.',
+  from:['Scheda racchetta','Carrello','Home','Menu Servizi'],
+  b:[['shero','Cosa facciamo, in una frase','Esempio: "Ripariamo racchette di qualsiasi marca."',[]],
+     ['','Come funziona','Tre o quattro passi con icone.',[]],
+     ['','Prezzi e tempi','Chiari, senza sorprese.',[]],
+     ['cta','Azione principale','Repair e Care: "Invia le foto su WhatsApp". Protezione: si attiva nel carrello. Personalizza: "Scegli il capo".',['x:WhatsApp','carrello']],
+     ['','Domande frequenti','I dubbi più comuni.',[]],
+     ['','Il passo successivo','Care → racchette (per usare lo sconto). Repair → protezione per la prossima. Personalizza → abbigliamento.',['racchette','abbigliamento','servizio']]]},
+ team:{t:'Team',u:'t91padel.com/team/pro',g:'Mostra chi gioca T91: Pro, Ambassador e Under nella stessa pagina, con un filtro.',
+  from:['Menu','Home','Scheda racchetta (fascia N.1)','Blog'],
+  b:[['shero','Apertura con foto di gruppo','Il messaggio del Team.',[]],
+     ['','Pro · Ambassador · Under','Filtro in alto.',['team']],
+     ['','Griglia degli atleti','Foto, nome, ranking, racchetta.',['atleta']],
+     ['','Ultimi risultati','Dai tornei.',['articolo']],
+     ['cta','Sei un maestro o un centro?','Per chi vuole entrare nel programma.',['x:Centri e maestri']]]},
+ atleta:{t:'Scheda atleta',u:'t91padel.com/team/nome-cognome',g:'Racconta un atleta e porta alla sua racchetta.',
+  from:['Team','Scheda racchetta (fascia N.1)','Blog · I nostri pro'],
+  b:[['shero','Foto, nome, ranking','',[]],
+     ['cta','La sua racchetta','Con "acquista".',['scheda']],
+     ['','Il suo set','Video "cosa c\'è nel mio borsone" e acquista tutto.',['carrello']],
+     ['','Tornei e risultati','',['articolo']],
+     ['','Altri atleti','',['team']]]},
+ club:{t:'T91 Club',u:'t91padel.com/club',g:'Spiega il Club e porta a iscriversi.',
+  from:['Scheda racchetta (prezzo Club)','Carrello','Home','Menu'],
+  b:[['shero','-30% sempre','Prezzo annuale e promo.',[]],
+     ['','I vantaggi','Sconto, compleanno, novità in anteprima, Repair con priorità, eventi.',[]],
+     ['','Quanto risparmi','Esempio con una racchetta.',[]],
+     ['cta','Iscriviti','Con l\'account T91.',['x:Account','carrello']],
+     ['','Inizia a usarlo','Le racchette e le novità.',['racchette']],
+     ['','Domande frequenti','',[]]]},
+ articolo:{t:'Articolo del blog',u:'t91padel.com/blog/guide/come-scegliere-la-racchetta',g:'Porta visite da Google e le accompagna verso i prodotti.',
+  from:['Google','Home','Newsletter e WhatsApp','Social'],
+  b:[['shero','Titolo, rubrica, tempo di lettura','',[]],
+     ['','Il testo','Con i prodotti citati inseriti nel testo.',['scheda']],
+     ['cta','Box "Trova la tua T91"','A metà articolo.',['quiz']],
+     ['','Prodotti dell\'articolo','Card cliccabili.',['scheda','racchette']],
+     ['','Articoli correlati','',['articolo']]]}
+};
+const N={home:'Home',racchette:'Racchette',scheda:'Scheda racchetta',abbigliamento:'Abbigliamento',servizio:'Pagina servizio',team:'Team',atleta:'Scheda atleta',club:'T91 Club',articolo:'Articolo del blog',quiz:'Trova la tua T91',confronta:'Confronta',carrello:'Carrello'};
+const EXTRA={quiz:'Quiz',confronta:'Confronta',carrello:'Carrello'};
+const $=id=>document.getElementById(id);
+const chip=k=>{if(k.startsWith('x:'))return `<span class="lnk ext">${k.slice(2)}</span>`;return P[k]?`<button class="lnk go" data-p="${k}">${N[k]}</button>`:`<span class="lnk ext">${N[k]||k}</span>`;};
+function show(k){
+  const p=P[k];
+  $('skTabs').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.p===k));
+  $('skTitle').textContent=p.t;$('skUrl').textContent=p.u;$('skGoal').textContent=p.g;
+  $('skWire').innerHTML=p.b.map(([c,t,d,to],i)=>`<li class="${c}" style="animation-delay:${i*30}ms"><b>${t}</b>${d?`<p>${d}</p>`:''}${to.length?`<div class="to">${to.map(chip).join('')}</div>`:''}</li>`).join('');
+  $('skFrom').innerHTML=p.from.map(f=>`<span class="lnk ext">${f}</span>`).join('');
+  const all=[...new Set(p.b.flatMap(b=>b[3]))];
+  $('skTo').innerHTML=all.map(chip).join('');
+  document.querySelectorAll('#scheletro .lnk.go').forEach(b=>b.onclick=()=>{show(b.dataset.p);const m=document.querySelector('.sk-main');if(m.getBoundingClientRect().top<0)m.scrollIntoView({behavior:'smooth',block:'start'});});
+}
+$('skTabs').innerHTML=Object.entries(P).map(([k,p])=>`<button data-p="${k}">${p.t}</button>`).join('');
+$('skTabs').querySelectorAll('button').forEach(b=>b.onclick=()=>show(b.dataset.p));
+show('home');
 })();
 </script>
 </body>
