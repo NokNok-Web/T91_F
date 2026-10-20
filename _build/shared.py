@@ -2,16 +2,51 @@ CDN='https://cdn.shopify.com/s/files/1/0826/8523/1445/files/'
 LOGO='https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978'
 TOPBAR='''  <div class="p-top"><div class="l"><a href="#">Outlet</a><a href="#">Mystery Box</a><a href="#">Buoni regalo</a><a href="#">Trova T91 vicino a te</a></div><div class="r"><a class="pro" href="#">Sei un centro o un maestro? <u>Scopri il programma →</u></a><span class="lang"><b>IT</b> · EN</span></div></div>
 '''
+MEGA='''    <div class="p-mega">
+      <div class="mg" data-k="racchette">
+        <div class="c"><a class="all" href="#"><b>Tutte le racchette</b><span>14 modelli · con i filtri</span><em>→</em></a><a class="mini" href="#">Confronta le racchette →</a></div>
+        <div class="c"><h6>Per livello</h6><a href="#">Principianti</a><a href="#">Intermedi</a><a href="#">Avanzati</a><a href="#">Pro</a></div>
+        <div class="c"><h6>Per stile di gioco</h6><a href="#">Potenza</a><a href="#">Controllo</a><a href="#">Polivalenti</a></div>
+        <div class="c tiles"><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=500" alt=""><span>Holo Collection</span></a><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=500" alt=""><span>Signature Pro</span></a><a class="t v" href="#"><small>4 domande</small>Trova la tua racchetta</a></div>
+      </div>
+      <div class="mg" data-k="abbigliamento">
+        <div class="c"><a class="all" href="#"><b>Tutto l'abbigliamento</b><span>Con i filtri per capo, taglia e colore</span><em>→</em></a><a class="mini" href="#">Personalizzabili →</a></div>
+        <div class="c"><h6>Uomo</h6><a href="#">T-shirt</a><a href="#">Polo</a><a href="#">Felpe</a><a href="#">Giacche</a><a href="#">Pantaloncini</a><a href="#">Pantaloni</a></div>
+        <div class="c"><h6>Donna</h6><a href="#">T-shirt e top</a><a href="#">Canottiere</a><a href="#">Abiti</a><a href="#">Gonne</a><a href="#">Leggings</a><a href="#">Felpe e giacche</a></div>
+        <div class="c tiles"><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/HALO_COLLECTION_COVER_CELL.webp?v=1779720707&width=500" alt=""><span>Halo Collection</span></a><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/Abbigliamento_Donna_Mobile.webp?v=1791538732&width=500" alt=""><span>Nuova stagione donna</span></a><a class="t v" href="#"><small>Anche un pezzo</small>Il tuo nome sulla maglia</a></div>
+      </div>
+      <div class="mg" data-k="accessori">
+        <div class="c"><a class="all" href="#"><b>Tutti gli accessori</b><span>Con il filtro per tipo</span><em>→</em></a></div>
+        <div class="c"><h6>Per la racchetta</h6><a href="#">Overgrip e copritesta</a><a href="#">Palline</a><a href="#">Borse e zaini</a></div>
+        <div class="c"><h6>Da indossare</h6><a href="#">Calze</a><a href="#">Cappellini</a><a href="#">Polsini</a><a href="#">Manicotto</a><a href="#">Ciabatte</a><a href="#">Teli</a></div>
+        <div class="c tiles"><a class="t prod" href="#"><img src="https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BorsoneXLArancione1.webp?v=1788959393&width=400" alt=""><span>Borsa isotermica XL 2.0</span></a><a class="t prod" href="#"><img src="https://cdn.shopify.com/s/files/1/0826/8523/1445/files/ZainoNero1.webp?v=1788962898&width=400" alt=""><span>Thermo Pro Backpack</span></a></div>
+      </div>
+      <div class="mg" data-k="team">
+        <div class="c"><a class="all" href="#"><b>Tutto il Team</b><span>Pro, Ambassador e Under</span><em>→</em></a></div>
+        <div class="c"><h6>Il Team</h6><a href="#">Team Pro</a><a href="#">Ambassador</a><a href="#">Team Under</a></div>
+        <div class="c"><h6>In evidenza</h6><a href="#">Emiliano Iriart</a><a href="#">Bubu Salandro</a><a href="#">Nick Remedi</a></div>
+        <div class="c tiles"><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=500" alt=""><span>Le racchette dei pro</span></a><a class="t k" href="#"><small>Sei un maestro o un centro?</small>Scopri il programma T91 →</a></div>
+      </div>
+      <div class="mg" data-k="servizi">
+        <div class="c"><a class="all" href="#"><b>Tutti i servizi</b><span>Oltre a vendere racchette</span><em>→</em></a></div>
+        <div class="c svc"><a href="#"><b>T91 Care</b><span>Ritiro dell'usato, anche non T91</span></a><a href="#"><b>T91 Repair</b><span>Riparazioni di qualsiasi marca</span></a><a href="#"><b>Protezione racchetta</b><span>Garanzia estesa da €39,90</span></a></div>
+        <div class="c svc"><a href="#"><b>Personalizzazione</b><span>Il tuo nome, anche un pezzo</span></a><a href="#"><b>Click &amp; Collect</b><span>Ritiro gratis in negozio</span></a><a href="#"><b>Assistenza</b><span>Su WhatsApp, da un giocatore</span></a></div>
+        <div class="c tiles"><a class="t v" href="#"><small>Ritiro usato</small>Valuta la tua vecchia racchetta →</a></div>
+      </div>
+    </div>
+'''
 def HEAD(active=''):
     ON=' class="on"'
-    nav=''.join('<a'+(ON if n==active else '')+' href="#">'+n+'</a>' for n in ['Racchette','Abbigliamento','Accessori','Team','Servizi','Blog'])
+    items=[('Racchette','racchette'),('Abbigliamento','abbigliamento'),('Accessori','accessori'),('Team','team'),('Servizi','servizi'),('Blog','')]
+    nav=''.join('<a'+(ON if n==active else '')+(' data-mega="'+k+'"' if k else '')+' href="#">'+n+'</a>' for n,k in items)
     return f'''  <header class="p-head" data-n="menu">
     <button class="p-burger js-menu" aria-label="Menu"><svg class="i"><use href="#i-burger"/></svg></button>
     <a class="p-logo" href="#" data-link="home"><img src="{LOGO}" alt="T91" onerror="this.outerHTML='<span class=&quot;fb&quot;>T91</span>'"></a>
     <nav class="p-nav">{nav}<a class="club" href="#">T91 Club</a></nav>
     <div class="p-icons"><svg class="i"><use href="#i-search"/></svg><svg class="i"><use href="#i-user"/></svg><button class="p-cart js-open" aria-label="Carrello"><svg class="i"><use href="#i-bag"/></svg><em class="js-count">0</em></button></div>
-  </header>
+{MEGA}  </header>
 '''
+
 FOOTER='''  <footer class="p-foot">
     <div><div class="p-quizbox"><b>Trova la tua racchetta.</b><span>Fai il test in 60 secondi e ricevi il risultato su WhatsApp.</span><div class="in"><i>Il tuo numero WhatsApp</i><em>Inizia</em></div></div></div>
     <div>
@@ -143,6 +178,45 @@ CSS='''
 .p-mm .sub-list{list-style:none}
 .p-mm .sub-list a{display:flex;justify-content:space-between;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line);font-size:18px}
 .p-mm .sub-list a span{font-size:13px;color:var(--mute)}
+
+/* === mega menu desktop === */
+.p-mega{display:none}
+@container dev (min-width: 900px){
+  .p-head{position:sticky}
+  .p-nav a[data-mega]{cursor:pointer}
+  .p-nav a.hov{border-bottom:2px solid var(--ink);padding-bottom:3px}
+  .p-mega{display:block;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility 0s .18s;z-index:40}
+  .p-mega.open{opacity:1;visibility:visible;transform:none;transition:opacity .18s,transform .18s}
+  .p-mega .mg{display:none;grid-template-columns:1.05fr .8fr .8fr 1.6fr;gap:32px;padding:32px 40px 36px}
+  .p-mega .mg.on{display:grid}
+  .p-mega h6{font-weight:400;font-size:12.5px;color:var(--mute);margin:0 0 10px}
+  .p-mega .c{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .p-mega .c>a:not(.all):not(.mini):not(.t){font-size:16px;padding:5px 0;color:var(--ink)}
+  .p-mega .c>a:not(.all):not(.mini):not(.t):hover{color:var(--mute)}
+  .p-mega .all{display:flex;flex-direction:column;gap:4px;background:#000;color:#fff;border-radius:20px;padding:22px;position:relative;min-height:130px;justify-content:flex-end}
+  .p-mega .all b{font-size:22px;letter-spacing:-.02em}
+  .p-mega .all span{font-size:13px;color:#A1A1A6}
+  .p-mega .all em{position:absolute;top:18px;right:20px;font-style:normal;color:var(--volt);font-size:20px}
+  .p-mega .all:hover{background:#1D1D1F}
+  .p-mega .mini{margin-top:12px;font-size:14px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#C7C7CC}
+  .p-mega .tiles{flex-direction:row;gap:10px}
+  .p-mega .t{flex:1;border-radius:18px;overflow:hidden;position:relative;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;font-size:15px;line-height:1.2}
+  .p-mega .t small{display:block;font-size:12px;opacity:.7;margin-bottom:4px}
+  .p-mega .t.img{background:#111;color:#fff}
+  .p-mega .t.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .4s}
+  .p-mega .t.img:hover img{transform:scale(1.05)}
+  .p-mega .t.img span{position:relative}
+  .p-mega .t.v{background:var(--volt);color:#000}
+  .p-mega .t.k{background:#000;color:#fff}
+  .p-mega .t.prod{background:var(--fog);color:var(--ink)}
+  .p-mega .t.prod img{position:absolute;inset:12px 12px 40px;width:calc(100% - 24px);height:calc(100% - 52px);object-fit:contain}
+  .p-mega .t.prod span{position:relative}
+  .p-mega .svc{gap:8px}
+  .p-mega .svc a{display:flex;flex-direction:column;padding:10px 12px;border-radius:14px;background:var(--fog)}
+  .p-mega .svc a:hover{background:#ECECF0}
+  .p-mega .svc b{font-size:15.5px}
+  .p-mega .svc span{font-size:12.5px;color:var(--mute)}
+}
 /* toast pagine non ancora disegnate */
 .p-toast{position:absolute;left:50%;bottom:90px;transform:translate(-50%,20px);background:#000;color:#fff;font-family:'Questrial',sans-serif;font-size:13.5px;padding:11px 18px;border-radius:980px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:70;white-space:nowrap}
 .p-toast.show{opacity:1;transform:translate(-50%,0)}
@@ -168,6 +242,18 @@ function t91Menu(root,toastHost){
   mm.querySelector('.js-mclose').onclick=()=>{mm.classList.remove('open');setTimeout(back,350);};
   $$('[data-go]').forEach(b=>b.onclick=()=>{$$('.pane.l2').forEach(p=>p.classList.toggle('in',p.dataset.pane===b.dataset.go));l1.classList.add('away');});
   $$('.js-mback').forEach(b=>b.onclick=back);
+}
+
+function t91Mega(root){
+  const head=root.querySelector('.p-head'),mega=root.querySelector('.p-mega'); if(!head||!mega)return;
+  const links=[...head.querySelectorAll('.p-nav a[data-mega]')];
+  let t;
+  const show=k=>{clearTimeout(t);mega.classList.add('open');mega.querySelectorAll('.mg').forEach(m=>m.classList.toggle('on',m.dataset.k===k));links.forEach(a=>a.classList.toggle('hov',a.dataset.mega===k));};
+  const hide=()=>{t=setTimeout(()=>{mega.classList.remove('open');links.forEach(a=>a.classList.remove('hov'));},140);};
+  links.forEach(a=>{a.addEventListener('mouseenter',()=>show(a.dataset.mega));a.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();if(mega.classList.contains('open')&&a.classList.contains('hov')){clearTimeout(t);mega.classList.remove('open');links.forEach(x=>x.classList.remove('hov'));}else show(a.dataset.mega);});});
+  head.querySelectorAll('.p-nav a:not([data-mega]),.p-logo,.p-icons').forEach(el=>el.addEventListener('mouseenter',hide));
+  head.addEventListener('mouseleave',hide);mega.addEventListener('mouseenter',()=>clearTimeout(t));
+  root.addEventListener('click',e=>{if(!e.target.closest('.p-head'))mega.classList.remove('open'),links.forEach(a=>a.classList.remove('hov'));});
 }
 function t91Toast(host){
   let t=host.querySelector('.p-toast'); if(!t){t=document.createElement('div');t.className='p-toast';t.textContent='Questa pagina la disegniamo nei prossimi passi';host.appendChild(t);}

@@ -342,7 +342,7 @@ js='''<script>
 '''+S.JS_MENU+'''
 const screen=document.querySelector('.screen');
 screen.appendChild(document.getElementById('tpl-menu').content.cloneNode(true));
-t91Menu(screen);t91Toast(screen);
+t91Menu(screen);t91Mega(screen);t91Toast(screen);
 screen.querySelectorAll('.h-sec').forEach(sec=>{
   const car=sec.querySelector('.h-car'),pv=sec.querySelector('.js-prev'),nx=sec.querySelector('.js-next');
   if(!car||!pv)return;

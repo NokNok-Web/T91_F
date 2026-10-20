@@ -888,6 +888,44 @@ svg.f{fill:currentColor;stroke:none}
   .p-top .lang b{color:#fff}
   .p-toast{bottom:40px}
 }
+/* === mega menu desktop === */
+.p-mega{display:none}
+@container dev (min-width: 900px){
+  .p-head{position:sticky}
+  .p-nav a[data-mega]{cursor:pointer}
+  .p-nav a.hov{border-bottom:2px solid var(--ink);padding-bottom:3px}
+  .p-mega{display:block;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility 0s .18s;z-index:40}
+  .p-mega.open{opacity:1;visibility:visible;transform:none;transition:opacity .18s,transform .18s}
+  .p-mega .mg{display:none;grid-template-columns:1.05fr .8fr .8fr 1.6fr;gap:32px;padding:32px 40px 36px}
+  .p-mega .mg.on{display:grid}
+  .p-mega h6{font-weight:400;font-size:12.5px;color:var(--mute);margin:0 0 10px}
+  .p-mega .c{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .p-mega .c>a:not(.all):not(.mini):not(.t){font-size:16px;padding:5px 0;color:var(--ink)}
+  .p-mega .c>a:not(.all):not(.mini):not(.t):hover{color:var(--mute)}
+  .p-mega .all{display:flex;flex-direction:column;gap:4px;background:#000;color:#fff;border-radius:20px;padding:22px;position:relative;min-height:130px;justify-content:flex-end}
+  .p-mega .all b{font-size:22px;letter-spacing:-.02em}
+  .p-mega .all span{font-size:13px;color:#A1A1A6}
+  .p-mega .all em{position:absolute;top:18px;right:20px;font-style:normal;color:var(--volt);font-size:20px}
+  .p-mega .all:hover{background:#1D1D1F}
+  .p-mega .mini{margin-top:12px;font-size:14px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#C7C7CC}
+  .p-mega .tiles{flex-direction:row;gap:10px}
+  .p-mega .t{flex:1;border-radius:18px;overflow:hidden;position:relative;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;font-size:15px;line-height:1.2}
+  .p-mega .t small{display:block;font-size:12px;opacity:.7;margin-bottom:4px}
+  .p-mega .t.img{background:#111;color:#fff}
+  .p-mega .t.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .4s}
+  .p-mega .t.img:hover img{transform:scale(1.05)}
+  .p-mega .t.img span{position:relative}
+  .p-mega .t.v{background:var(--volt);color:#000}
+  .p-mega .t.k{background:#000;color:#fff}
+  .p-mega .t.prod{background:var(--fog);color:var(--ink)}
+  .p-mega .t.prod img{position:absolute;inset:12px 12px 40px;width:calc(100% - 24px);height:calc(100% - 52px);object-fit:contain}
+  .p-mega .t.prod span{position:relative}
+  .p-mega .svc{gap:8px}
+  .p-mega .svc a{display:flex;flex-direction:column;padding:10px 12px;border-radius:14px;background:var(--fog)}
+  .p-mega .svc a:hover{background:#ECECF0}
+  .p-mega .svc b{font-size:15.5px}
+  .p-mega .svc span{font-size:12.5px;color:var(--mute)}
+}
 </style>
 </head>
 <body>
@@ -1270,8 +1308,40 @@ svg.f{fill:currentColor;stroke:none}
   <header class="p-head" data-n="menu">
     <button class="p-burger js-menu" aria-label="Menu"><svg class="i"><use href="#i-burger"/></svg></button>
     <a class="p-logo" href="#" data-link="home"><img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='<span class=&quot;fb&quot;>T91</span>'"></a>
-    <nav class="p-nav"><a class="on" href="#">Racchette</a><a href="#">Abbigliamento</a><a href="#">Accessori</a><a href="#">Team</a><a href="#">Servizi</a><a href="#">Blog</a><a class="club" href="#">T91 Club</a></nav>
+    <nav class="p-nav"><a class="on" data-mega="racchette" href="#">Racchette</a><a data-mega="abbigliamento" href="#">Abbigliamento</a><a data-mega="accessori" href="#">Accessori</a><a data-mega="team" href="#">Team</a><a data-mega="servizi" href="#">Servizi</a><a href="#">Blog</a><a class="club" href="#">T91 Club</a></nav>
     <div class="p-icons"><svg class="i"><use href="#i-search"/></svg><svg class="i"><use href="#i-user"/></svg><button class="p-cart js-open" aria-label="Carrello"><svg class="i"><use href="#i-bag"/></svg><em class="js-count">0</em></button></div>
+    <div class="p-mega">
+      <div class="mg" data-k="racchette">
+        <div class="c"><a class="all" href="#"><b>Tutte le racchette</b><span>14 modelli · con i filtri</span><em>→</em></a><a class="mini" href="#">Confronta le racchette →</a></div>
+        <div class="c"><h6>Per livello</h6><a href="#">Principianti</a><a href="#">Intermedi</a><a href="#">Avanzati</a><a href="#">Pro</a></div>
+        <div class="c"><h6>Per stile di gioco</h6><a href="#">Potenza</a><a href="#">Controllo</a><a href="#">Polivalenti</a></div>
+        <div class="c tiles"><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=500" alt=""><span>Holo Collection</span></a><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=500" alt=""><span>Signature Pro</span></a><a class="t v" href="#"><small>4 domande</small>Trova la tua racchetta</a></div>
+      </div>
+      <div class="mg" data-k="abbigliamento">
+        <div class="c"><a class="all" href="#"><b>Tutto l'abbigliamento</b><span>Con i filtri per capo, taglia e colore</span><em>→</em></a><a class="mini" href="#">Personalizzabili →</a></div>
+        <div class="c"><h6>Uomo</h6><a href="#">T-shirt</a><a href="#">Polo</a><a href="#">Felpe</a><a href="#">Giacche</a><a href="#">Pantaloncini</a><a href="#">Pantaloni</a></div>
+        <div class="c"><h6>Donna</h6><a href="#">T-shirt e top</a><a href="#">Canottiere</a><a href="#">Abiti</a><a href="#">Gonne</a><a href="#">Leggings</a><a href="#">Felpe e giacche</a></div>
+        <div class="c tiles"><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/HALO_COLLECTION_COVER_CELL.webp?v=1779720707&width=500" alt=""><span>Halo Collection</span></a><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/Abbigliamento_Donna_Mobile.webp?v=1791538732&width=500" alt=""><span>Nuova stagione donna</span></a><a class="t v" href="#"><small>Anche un pezzo</small>Il tuo nome sulla maglia</a></div>
+      </div>
+      <div class="mg" data-k="accessori">
+        <div class="c"><a class="all" href="#"><b>Tutti gli accessori</b><span>Con il filtro per tipo</span><em>→</em></a></div>
+        <div class="c"><h6>Per la racchetta</h6><a href="#">Overgrip e copritesta</a><a href="#">Palline</a><a href="#">Borse e zaini</a></div>
+        <div class="c"><h6>Da indossare</h6><a href="#">Calze</a><a href="#">Cappellini</a><a href="#">Polsini</a><a href="#">Manicotto</a><a href="#">Ciabatte</a><a href="#">Teli</a></div>
+        <div class="c tiles"><a class="t prod" href="#"><img src="https://cdn.shopify.com/s/files/1/0826/8523/1445/files/BorsoneXLArancione1.webp?v=1788959393&width=400" alt=""><span>Borsa isotermica XL 2.0</span></a><a class="t prod" href="#"><img src="https://cdn.shopify.com/s/files/1/0826/8523/1445/files/ZainoNero1.webp?v=1788962898&width=400" alt=""><span>Thermo Pro Backpack</span></a></div>
+      </div>
+      <div class="mg" data-k="team">
+        <div class="c"><a class="all" href="#"><b>Tutto il Team</b><span>Pro, Ambassador e Under</span><em>→</em></a></div>
+        <div class="c"><h6>Il Team</h6><a href="#">Team Pro</a><a href="#">Ambassador</a><a href="#">Team Under</a></div>
+        <div class="c"><h6>In evidenza</h6><a href="#">Emiliano Iriart</a><a href="#">Bubu Salandro</a><a href="#">Nick Remedi</a></div>
+        <div class="c tiles"><a class="t img" href="#"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=500" alt=""><span>Le racchette dei pro</span></a><a class="t k" href="#"><small>Sei un maestro o un centro?</small>Scopri il programma T91 →</a></div>
+      </div>
+      <div class="mg" data-k="servizi">
+        <div class="c"><a class="all" href="#"><b>Tutti i servizi</b><span>Oltre a vendere racchette</span><em>→</em></a></div>
+        <div class="c svc"><a href="#"><b>T91 Care</b><span>Ritiro dell'usato, anche non T91</span></a><a href="#"><b>T91 Repair</b><span>Riparazioni di qualsiasi marca</span></a><a href="#"><b>Protezione racchetta</b><span>Garanzia estesa da €39,90</span></a></div>
+        <div class="c svc"><a href="#"><b>Personalizzazione</b><span>Il tuo nome, anche un pezzo</span></a><a href="#"><b>Click &amp; Collect</b><span>Ritiro gratis in negozio</span></a><a href="#"><b>Assistenza</b><span>Su WhatsApp, da un giocatore</span></a></div>
+        <div class="c tiles"><a class="t v" href="#"><small>Ritiro usato</small>Valuta la tua vecchia racchetta →</a></div>
+      </div>
+    </div>
   </header>
   <div class="p-crumbs"><a href="#" data-link="home">Home</a><i>/</i><a href="#">Racchette</a><i>/</i><b>Boss One K12 Pro Master 6.0</b></div>
   <section class="p-main">
@@ -1681,6 +1751,17 @@ function t91Menu(root,toastHost){
   $$('[data-go]').forEach(b=>b.onclick=()=>{$$('.pane.l2').forEach(p=>p.classList.toggle('in',p.dataset.pane===b.dataset.go));l1.classList.add('away');});
   $$('.js-mback').forEach(b=>b.onclick=back);
 }
+function t91Mega(root){
+  const head=root.querySelector('.p-head'),mega=root.querySelector('.p-mega'); if(!head||!mega)return;
+  const links=[...head.querySelectorAll('.p-nav a[data-mega]')];
+  let t;
+  const show=k=>{clearTimeout(t);mega.classList.add('open');mega.querySelectorAll('.mg').forEach(m=>m.classList.toggle('on',m.dataset.k===k));links.forEach(a=>a.classList.toggle('hov',a.dataset.mega===k));};
+  const hide=()=>{t=setTimeout(()=>{mega.classList.remove('open');links.forEach(a=>a.classList.remove('hov'));},140);};
+  links.forEach(a=>{a.addEventListener('mouseenter',()=>show(a.dataset.mega));a.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();if(mega.classList.contains('open')&&a.classList.contains('hov')){clearTimeout(t);mega.classList.remove('open');links.forEach(x=>x.classList.remove('hov'));}else show(a.dataset.mega);});});
+  head.querySelectorAll('.p-nav a:not([data-mega]),.p-logo,.p-icons').forEach(el=>el.addEventListener('mouseenter',hide));
+  head.addEventListener('mouseleave',hide);mega.addEventListener('mouseenter',()=>clearTimeout(t));
+  root.addEventListener('click',e=>{if(!e.target.closest('.p-head'))mega.classList.remove('open'),links.forEach(a=>a.classList.remove('hov'));});
+}
 function t91Toast(host){
   let t=host.querySelector('.p-toast'); if(!t){t=document.createElement('div');t.className='p-toast';t.textContent='Questa pagina la disegniamo nei prossimi passi';host.appendChild(t);}
   host.addEventListener('click',e=>{const a=e.target.closest('a');if(!a||a.getAttribute('href')!=='#')return;e.preventDefault();if(a.dataset.link)return;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1800);});
@@ -1710,7 +1791,7 @@ function t91Toast(host){
     sc.appendChild(tpl.content.cloneNode(true));
     screen.appendChild(tplD.content.cloneNode(true));
     screen.appendChild(document.getElementById('tpl-menu').content.cloneNode(true));
-    t91Menu(screen);t91Toast(screen);
+    t91Menu(screen);t91Mega(screen);t91Toast(screen);
     const $=s=>screen.querySelector(s),$$=s=>[...screen.querySelectorAll(s)];
     const st={w:'std',g:360,care:0,club:false,og:false,count:0,img:0};
     const thumbs=$('.p-thumbs'),big=$('.p-stage .big'),gc=$('.js-gc');
