@@ -223,6 +223,23 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 .need .n{width:40px;height:40px;border-radius:50%;background:var(--volt);color:#000;display:grid;place-items:center;font-size:17px;margin-bottom:6px}
 .need b{font-size:22px;letter-spacing:-.015em;line-height:1.15}
 .need p{font-size:16px;color:#C7C7CC}
+.lvl{font-weight:400;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.02em;margin:56px 0 18px;display:flex;align-items:center;gap:12px}
+.lvl span{width:34px;height:34px;border-radius:50%;background:#000;color:var(--volt);display:grid;place-items:center;font-size:15px}
+.cols7,.cols3{display:grid;gap:12px}
+@media(min-width:700px){.cols7{grid-template-columns:repeat(2,1fr)}.cols3{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1050px){.cols7{grid-template-columns:repeat(4,1fr)}}
+.col{background:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.col .ch b{display:block;font-size:22px;letter-spacing:-.015em}
+.col .ch .lk{font-size:12.5px;color:var(--mute)}
+.col .cn{font-size:14px;color:var(--mute)}
+.col ul{list-style:none;margin-top:4px}
+.col li{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:16px}
+.col li .pn{display:flex;flex-direction:column}
+.col li .sb{font-size:13px;color:var(--mute);margin-top:2px}
+.nw{flex:none;font-size:11px;background:var(--volt);color:#000;border-radius:980px;padding:2px 8px;line-height:1.5}
+.col.k{background:#000;color:#F5F5F7}
+.col.k li{border-color:#2C2C2E}
+.col.k .lk,.col.k .sb{color:#8E8E93}
 .foot{background:var(--fog);color:var(--mute);font-size:12px;padding:28px 0;border-top:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .foot a{text-decoration:underline}
@@ -239,7 +256,6 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
   <img class="lg" src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.style.display='none'">
   <h1>L'alberatura<br>del nuovo sito.</h1>
   <p class="sub" style="max-width:660px;margin-left:auto;margin-right:auto">Quali pagine avrà il nuovo T91, come sono organizzate e come si collegano tra loro. È la mappa da cui partiamo per disegnare ogni pagina.</p>
-  <div class="legend"><span><i class="dot d-new"></i>Nuova</span><span><i class="dot d-move"></i>Esiste, si sposta o cambia</span><span><i class="dot d-keep"></i>Esiste, resta</span></div>
 </div></header>
 
 <!-- OGGI -->
@@ -308,95 +324,15 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 
 <!-- ALBERO -->
 <section class="sec fog" id="albero"><div class="wrap">
-  <div class="center"><span class="eye">L'albero</span><h2>Tutte le pagine,<br>con il loro indirizzo.</h2>
-  <p class="sub">Ogni riquadro è una pagina. L'indirizzo sotto è quello che vedrà il cliente e che Google indicizzerà.</p></div>
-  <div class="tree">
-    <div class="root"><div class="node-root"><b>Home</b><code>t91padel.com</code></div></div>
-    <div class="trunk"></div>
-    <div class="branches">
-
-      <div class="branch">
-        <div class="hd"><i class="dot d-move"></i><div><b>Racchette</b><code>/racchette</code></div></div>
-        <p class="desc">Tutte le racchette in una pagina. I filtri generano gli indirizzi.</p>
-        <div class="leaf strong"><span class="t"><i class="dot d-move"></i>Tutte le racchette</span><code>/racchette</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Filtro livello</span><code>/racchette/principianti</code><ul><li>Principianti</li><li>Intermedi</li><li>Avanzati</li><li>Pro</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Filtro gioco</span><code>/racchette/potenza</code><ul><li>Potenza</li><li>Controllo</li><li>Polivalenti</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Filtro collezione</span><code>/racchette/holo</code><ul><li>Holo</li><li>Signature Pro</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Trova la tua T91 (quiz)</span><code>/racchette/trova-la-tua-t91</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Confronta</span><code>/racchette/confronta</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Scheda racchetta</span><code>/racchette/boss-one-k12-pro-master-6-0</code></div>
-      </div>
-
-      <div class="branch">
-        <div class="hd"><i class="dot d-move"></i><div><b>Abbigliamento</b><code>/abbigliamento</code></div></div>
-        <p class="desc">Uomo e Donna restano, con colori e taglie nella stessa scheda.</p>
-        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Uomo</span><code>/abbigliamento/uomo</code><ul><li>T-shirt</li><li>Polo</li><li>Felpe</li><li>Giacche</li><li>Pantaloncini</li><li>Pantaloni</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Donna</span><code>/abbigliamento/donna</code><ul><li>T-shirt</li><li>Top</li><li>Canottiere</li><li>Abiti</li><li>Felpe</li><li>Giacche</li><li>Pantaloni</li><li>Leggings</li><li>Gonne</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Personalizzabili</span><code>/abbigliamento/personalizzabili</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Scheda capo</span><code>/abbigliamento/uomo/halo-t-shirt</code></div>
-      </div>
-
-      <div class="branch">
-        <div class="hd"><i class="dot d-move"></i><div><b>Accessori</b><code>/accessori</code></div></div>
-        <p class="desc">Tutti gli accessori in una pagina, filtrabili per tipo.</p>
-        <div class="leaf strong"><span class="t"><i class="dot d-move"></i>Tutti gli accessori</span><code>/accessori</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-keep"></i>Filtro tipo</span><code>/accessori/calze</code><ul><li>Borse e zaini</li><li>Overgrip e copritesta</li><li>Palline</li><li>Calze</li><li>Cappellini</li><li>Polsini</li><li>Manicotto</li><li>Ciabatte</li><li>Teli</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Scheda accessorio</span><code>/accessori/borsa-isotermica-xl-2-0</code></div>
-      </div>
-
-      <div class="branch k">
-        <div class="hd"><i class="dot d-new"></i><div><b>Team T91</b><code>/team</code></div></div>
-        <p class="desc">Le persone che giocano T91: prova del prodotto e community.</p>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Team Pro</span><code>/team/pro</code><ul><li>Roster</li><li>Ranking</li><li>Tornei</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Ambassador</span><code>/team/ambassador</code><ul><li>Presentazione degli atleti ambassador</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Team Under</span><code>/team/under</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Scheda atleta</span><code>/team/nome-cognome</code><ul><li>La sua pala</li><li>Il suo set</li></ul></div>
-      </div>
-
-      <div class="branch">
-        <div class="hd"><i class="dot d-new"></i><div><b>Servizi</b><code>/servizi</code></div></div>
-        <p class="desc">Tutto ciò che oggi fate ma non si vede.</p>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>T91 Care · ritiro usato</span><code>/servizi/t91-care</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>T91 Repair</span><code>/servizi/repair</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Protezione racchetta</span><code>/servizi/protezione</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Personalizza</span><code>/servizi/personalizza</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Click &amp; Collect</span><code>/servizi/click-collect</code></div>
-      </div>
-
-      <div class="branch">
-        <div class="hd"><i class="dot d-new"></i><div><b>Blog</b><code>/blog</code></div></div>
-        <p class="desc">Due articoli al mese, divisi in quattro rubriche.</p>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Rubriche</span><code>/blog/guide</code><ul><li>Novità</li><li>Tornei</li><li>I nostri pro</li><li>Guide</li></ul></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Articolo</span><code>/blog/guide/come-scegliere-la-racchetta</code></div>
-      </div>
-
-      <div class="branch">
-        <div class="hd"><i class="dot d-new"></i><div><b>T91 Club</b><code>/club</code></div></div>
-        <p class="desc">Membership e vantaggi, collegata all'account.</p>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>Il Club</span><code>/club</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Account</span><code>/account</code><ul><li>Ordini</li><li>Club</li><li>Risultato quiz</li><li>Richieste Care e Repair</li></ul></div>
-      </div>
-
-      <div class="branch">
-        <div class="hd"><i class="dot d-move"></i><div><b>Centri e maestri</b><code>/centri-e-maestri</code></div></div>
-        <p class="desc">Una vera pagina per chi lavora con T91, raggiungibile dalla barra in alto e dal footer.</p>
-        <div class="leaf strong"><span class="t"><i class="dot d-new"></i>Il programma T91</span><code>/centri-e-maestri</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Programma centri</span><code>/centri-e-maestri/centri</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Programma maestri</span><code>/centri-e-maestri/maestri</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-move"></i>Trova T91 vicino a te</span><code>/trova-t91</code></div>
-        <div class="leaf"><span class="t"><i class="dot d-new"></i>T91 Experience</span><code>/centri-e-maestri/experience</code></div>
-      </div>
-
-    </div>
-    <div class="side">
-      <div class="box"><h4>Offerte · barra in alto</h4><ul><li>Outlet <code>/outlet</code></li><li>Mystery Box <code>/mystery-box</code></li><li>Buoni regalo <code>/buoni-regalo</code></li></ul></div>
-      <div class="box"><h4>Sempre presenti</h4><ul><li>Ricerca</li><li>Carrello e checkout <code>/carrello</code></li><li>Ricerca con suggerimenti</li></ul></div>
-      <div class="box"><h4>Nel footer</h4><ul><li>Chi siamo <code>/chi-siamo</code></li><li>Assistenza e FAQ <code>/assistenza</code></li><li>Spedizioni e resi</li><li>Privacy, cookie, termini</li></ul></div>
-    </div>
+  <div class="center"><span class="eye">L'albero</span><h2>Tutte le pagine del sito.</h2>
+  <p class="sub">Ogni colonna è una voce del menu e contiene le sue pagine. L'etichetta <span class="nw" style="vertical-align:3px">Nuova</span> indica le pagine che oggi non esistono.</p></div>
+  <h3 class="lvl"><span>1</span>Menu principale</h3>
+  <div class="cols7"><div class="col"><div class="ch"><b>Racchette</b><span class="lk">t91padel.com/racchette</span></div><ul><li><span class="pn">Tutte le racchette<span class="sb">Con i filtri: livello, stile di gioco, collezione</span></span></li><li><span class="pn">Trova la tua T91<span class="sb">Il quiz</span></span></li><li><span class="pn">Confronta le racchette</span><span class="nw">Nuova</span></li><li><span class="pn">Scheda di ogni racchetta</span></li></ul></div><div class="col"><div class="ch"><b>Abbigliamento</b><span class="lk">t91padel.com/abbigliamento</span></div><ul><li><span class="pn">Tutto l'abbigliamento<span class="sb">Con i filtri: uomo, donna, tipo di capo</span></span></li><li><span class="pn">Personalizzabili</span><span class="nw">Nuova</span></li><li><span class="pn">Scheda di ogni capo<span class="sb">Colori e taglie nella stessa pagina</span></span></li></ul></div><div class="col"><div class="ch"><b>Accessori</b><span class="lk">t91padel.com/accessori</span></div><ul><li><span class="pn">Tutti gli accessori<span class="sb">Con il filtro per tipo: borse, calze, overgrip…</span></span></li><li><span class="pn">Scheda di ogni accessorio</span></li></ul></div><div class="col k"><div class="ch"><b>Team</b><span class="lk">t91padel.com/team</span></div><ul><li><span class="pn">Team Pro</span><span class="nw">Nuova</span></li><li><span class="pn">Ambassador<span class="sb">Diventa la presentazione degli atleti</span></span></li><li><span class="pn">Team Under</span><span class="nw">Nuova</span></li><li><span class="pn">Scheda di ogni atleta<span class="sb">Con la sua racchetta e il suo set</span></span><span class="nw">Nuova</span></li></ul></div><div class="col"><div class="ch"><b>Servizi</b><span class="lk">t91padel.com/servizi</span></div><ul><li><span class="pn">T91 Care · ritiro usato</span><span class="nw">Nuova</span></li><li><span class="pn">T91 Repair</span><span class="nw">Nuova</span></li><li><span class="pn">Protezione racchetta</span><span class="nw">Nuova</span></li><li><span class="pn">Personalizzazione</span><span class="nw">Nuova</span></li><li><span class="pn">Click &amp; Collect</span><span class="nw">Nuova</span></li></ul></div><div class="col"><div class="ch"><b>Blog</b><span class="lk">t91padel.com/blog</span></div><ul><li><span class="pn">Novità</span><span class="nw">Nuova</span></li><li><span class="pn">Tornei</span><span class="nw">Nuova</span></li><li><span class="pn">I nostri pro</span><span class="nw">Nuova</span></li><li><span class="pn">Guide</span><span class="nw">Nuova</span></li></ul></div><div class="col"><div class="ch"><b>T91 Club</b><span class="lk">t91padel.com/club</span></div><ul><li><span class="pn">Il Club</span><span class="nw">Nuova</span></li><li><span class="pn">Il tuo account<span class="sb">Ordini, Club, risultato del quiz</span></span></li></ul></div></div>
+  <h3 class="lvl"><span>2</span>Barra in alto e footer</h3>
+  <div class="cols3"><div class="col"><div class="ch"><b>Offerte</b><span class="lk">barra in alto</span></div><ul><li><span class="pn">Outlet</span></li><li><span class="pn">Mystery Box</span></li><li><span class="pn">Buoni regalo</span></li></ul></div><div class="col"><div class="ch"><b>Centri e maestri</b><span class="lk">barra in alto e footer</span></div><ul><li><span class="pn">Il programma T91</span><span class="nw">Nuova</span></li><li><span class="pn">Programma centri</span></li><li><span class="pn">Programma maestri</span></li><li><span class="pn">Trova T91 vicino a te</span></li><li><span class="pn">T91 Experience</span><span class="nw">Nuova</span></li></ul></div><div class="col"><div class="ch"><b>Footer</b><span class="lk">in fondo a ogni pagina</span></div><ul><li><span class="pn">Chi siamo</span><span class="nw">Nuova</span></li><li><span class="pn">Assistenza e domande frequenti</span></li><li><span class="pn">Spedizioni e resi</span></li><li><span class="pn">Privacy e termini</span></li></ul></div></div>
     <div class="en">
       <div><span class="eye" style="margin:0">Tutto il sito anche in inglese</span><h3>Ogni pagina ha la sua versione inglese.</h3><p>Stesse pagine e stessi filtri, con gli indirizzi in inglese. La lingua si cambia da ogni pagina. Alle traduzioni pensiamo noi.</p></div>
       <ul><li><code>/racchette/principianti</code><span>→</span><code>/en/rackets/beginners</code></li><li><code>/abbigliamento/donna</code><span>→</span><code>/en/apparel/women</code></li><li><code>/accessori/calze</code><span>→</span><code>/en/accessories/socks</code></li><li><code>/team/pro</code><span>→</span><code>/en/team/pro</code></li><li><code>/servizi/repair</code><span>→</span><code>/en/services/repair</code></li></ul>
-    </div>
   </div>
 </div></section>
 
