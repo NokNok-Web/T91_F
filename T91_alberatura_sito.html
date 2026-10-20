@@ -243,13 +243,118 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 .foot{background:var(--fog);color:var(--mute);font-size:12px;padding:28px 0;border-top:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .foot a{text-decoration:underline}
+.mob .phones{display:grid;gap:40px;justify-items:center;padding:40px 0 24px}
+@media(min-width:1180px){.mob .phones{grid-template-columns:repeat(3,1fr);gap:24px}}
+.mob .ph-col{width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.mob .ph-cap{text-align:center}
+.mob .ph-cap .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#000;color:var(--volt);font-size:14px;margin-bottom:8px}
+.mob .ph-cap b{display:block;font-size:20px;letter-spacing:-.015em}
+.mob .ph-cap span{font-size:14.5px;color:var(--mute)}
+.mob .fit{position:relative;width:100%}
+.mob .fit>.phone{position:absolute;left:0;top:0;transform-origin:0 0}
+.mob .phone{width:414px;padding:12px;background:#1D1D1F;border-radius:60px;box-shadow:0 30px 70px rgba(0,0,0,.22)}
+.mob .scr{position:relative;width:390px;height:844px;border-radius:48px;overflow:hidden;background:#fff}
+.mob .tip{text-align:center;font-size:14px;color:var(--mute);margin-top:8px}
+.mob .notes{display:grid;gap:14px;padding:56px 0 96px}
+@media(min-width:800px){.mob .notes{grid-template-columns:repeat(3,1fr)}}
+.mob .note{background:#fff;border-radius:24px;padding:26px}
+.mob .note b{display:block;font-size:20px;letter-spacing:-.015em;margin-bottom:6px}
+.mob .note p{font-size:15.5px;color:#3A3A3C}
+.mob .site{position:absolute;inset:0;overflow-y:auto;scrollbar-width:none;font-size:14px;color:var(--ink)}
+.mob .site::-webkit-scrollbar{display:none}
+.mob .s-bar{height:30px;background:#000;color:var(--volt);font-size:11px;letter-spacing:.1em;display:flex;align-items:center;justify-content:center}
+.mob .s-head{position:sticky;top:0;z-index:5;height:56px;display:flex;align-items:center;padding:0 14px;gap:14px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.mob .s-head img{height:28px;width:auto}
+.mob .s-head .r{margin-left:auto;display:flex;gap:16px;align-items:center}
+.mob .s-cart{position:relative}
+.mob .s-cart em{position:absolute;top:-6px;right:-8px;background:var(--volt);font-style:normal;font-size:10px;width:16px;height:16px;border-radius:50%;display:grid;place-items:center}
+.mob .s-hero{position:relative;height:520px;background:#000;overflow:hidden}
+.mob .s-hero img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.mob .s-hero .tx{position:absolute;left:20px;right:20px;bottom:28px;color:#fff}
+.mob .s-hero small{font-size:13px;color:var(--volt)}
+.mob .s-hero h2{font-weight:400;font-size:40px;line-height:1;letter-spacing:-.035em;margin:6px 0 14px}
+.mob .s-hero .btn{display:inline-flex;background:#fff;color:#000;border-radius:980px;padding:11px 18px;font-size:14px}
+.mob .s-row{padding:28px 20px}
+.mob .s-row h3{font-weight:400;font-size:26px;letter-spacing:-.025em;margin-bottom:14px}
+.mob .s-tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mob .s-tiles div{background:var(--fog);border-radius:16px;padding:16px;font-size:15px;min-height:90px;display:flex;align-items:flex-end}
+.mob .mn{position:absolute;inset:0;z-index:20;background:#fff;display:flex;flex-direction:column;transform:translateY(-102%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.mob .mn.open{transform:none}
+.mob .mn-h{height:86px;padding:30px 14px 0;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);flex:none}
+.mob .mn-h img{height:28px;width:auto}
+.mob .mn-h .x{margin-left:auto;width:40px;height:40px;border-radius:50%;background:var(--fog);display:grid;place-items:center}
+.mob .mn-body{position:relative;flex:1;overflow:hidden}
+.mob .pane{position:absolute;inset:0;overflow-y:auto;scrollbar-width:none;padding:14px 18px 28px;transition:transform .32s cubic-bezier(.2,.8,.2,1),opacity .32s;background:#fff}
+.mob .pane::-webkit-scrollbar{display:none}
+.mob .pane.l1.away{transform:translateX(-30%);opacity:0;pointer-events:none}
+.mob .pane.l2{transform:translateX(100%)}
+.mob .pane.l2.in{transform:none}
+.mob .srch{display:flex;align-items:center;gap:10px;background:var(--fog);border-radius:14px;padding:12px 14px;color:var(--mute);font-size:15px;margin-bottom:10px}
+.mob .srch svg{width:18px;height:18px}
+.mob .m-list{list-style:none}
+.mob .m-list li{border-bottom:1px solid var(--line)}
+.mob .m-list button,.mob .m-list a{width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 2px;font-size:24px;letter-spacing:-.02em;text-align:left}
+.mob .m-list svg{width:20px;height:20px;color:#C7C7CC}
+.mob .m-list .club{display:inline-flex;background:var(--volt);border-radius:980px;padding:4px 14px;font-size:20px}
+.mob .m-quiz{display:flex;align-items:center;gap:14px;background:#000;color:#fff;border-radius:18px;padding:16px;margin:18px 0 14px}
+.mob .m-quiz .ic{width:44px;height:44px;border-radius:12px;background:var(--volt);color:#000;display:grid;place-items:center;flex:none;font-size:20px}
+.mob .m-quiz b{display:block;font-size:17px}
+.mob .m-quiz span{font-size:13px;color:#A1A1A6}
+.mob .m-sec{font-size:12.5px;color:var(--mute);margin:20px 0 6px}
+.mob .m-small{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mob .m-small a{display:block;background:var(--fog);border-radius:14px;padding:13px 14px;font-size:15px}
+.mob .m-pro{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-top:14px;font-size:14.5px}
+.mob .m-pro b{display:block;font-size:15.5px}
+.mob .m-pro span{font-size:13px;color:var(--mute)}
+.mob .m-pro em{font-style:normal;width:34px;height:34px;border-radius:50%;background:#000;color:var(--volt);display:grid;place-items:center;flex:none}
+.mob .m-foot{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+.mob .m-foot a{display:inline-flex;align-items:center;gap:8px;font-size:14px;border:1px solid var(--line);border-radius:980px;padding:9px 14px}
+.mob .m-foot .wa i{width:8px;height:8px;border-radius:50%;background:#34C759}
+.mob .m-foot .lang b{color:#000}
+.mob .m-foot .lang span{color:var(--mute)}
+.mob .back{display:inline-flex;align-items:center;gap:4px;font-size:15px;color:var(--mute);padding:4px 0 10px}
+.mob .back svg{width:18px;height:18px}
+.mob .l2 h4{font-weight:400;font-size:34px;letter-spacing:-.03em;line-height:1;margin-bottom:16px}
+.mob .all{display:flex;align-items:center;justify-content:space-between;background:#000;color:#fff;border-radius:18px;padding:18px;margin-bottom:20px}
+.mob .all b{display:block;font-size:19px}
+.mob .all span{font-size:13px;color:#A1A1A6}
+.mob .all em{font-style:normal;color:var(--volt);font-size:20px}
+.mob .chips{display:flex;flex-wrap:wrap;gap:8px}
+.mob .chips a{border:1px solid var(--line);border-radius:980px;padding:9px 15px;font-size:15px}
+.mob .cols2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mob .coll{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:1/1.05;background:#111;color:#fff;display:flex;align-items:flex-end;padding:12px;font-size:15px}
+.mob .coll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.mob .coll span{position:relative}
+.mob .cards2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.mob .cards2 a{border-radius:16px;padding:14px;min-height:96px;display:flex;flex-direction:column;justify-content:flex-end;font-size:15px}
+.mob .cards2 a small{font-size:12px;opacity:.7}
+.mob .cards2 .v{background:var(--volt)}
+.mob .cards2 .f{background:var(--fog)}
+.mob .sub-list{list-style:none}
+.mob .sub-list a{display:flex;justify-content:space-between;align-items:center;padding:14px 2px;border-bottom:1px solid var(--line);font-size:18px}
+.mob .sub-list a span{font-size:13px;color:var(--mute)}
+.mob .sub-list .nw{font-size:11px;background:var(--volt);border-radius:980px;padding:2px 8px;color:#000}
+.mob .ph-cap span{color:var(--mute)}
+.mob svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.mob button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.mob .phones{padding-top:56px}
+.mob .notes{padding:40px 0 0}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-burger" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></symbol>
+  <symbol id="i-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+</svg>
 
 <div class="nav"><div class="wrap">
   <div class="br"><img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='T91'"> Alberatura del sito</div>
-  <nav><a href="#oggi">Oggi</a><a href="#menu">Il nuovo menu</a><a href="#albero">L'albero</a><a href="#filtri">Filtri</a><a href="#percorsi">Collegamenti</a><a href="#domande">Decisioni</a><a href="index.html">← Indice</a></nav>
+  <nav><a href="#oggi">Oggi</a><a href="#menu">Il nuovo menu</a><a href="#albero">L'albero</a><a href="#mobile">Da mobile</a><a href="#filtri">Filtri</a><a href="#percorsi">Collegamenti</a><a href="#domande">Decisioni</a><a href="index.html">← Indice</a></nav>
 </div></div>
 
 <header class="hero"><div class="wrap">
@@ -298,12 +403,39 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
   <div class="mm-note">
     <div><b>Nessuno è obbligato a scegliere</b><p>Cliccando "Racchette" si arriva sempre a tutte le racchette. Livello e gioco sono solo scorciatoie per chi sa già cosa cerca. Chi non ha mai comprato una pala ha anche il quiz.</p></div>
     <div><b>Centri e maestri: un link chiaro</b><p>Non una voce tra le altre, ma una frase con freccia a destra della barra: "Sei un centro o un maestro? Scopri il programma →". Porta alla pagina dedicata ed è ripetuto nel footer.</p></div>
-    <div><b>Su mobile</b><p>Toccando Racchette, la prima riga è "Vedi tutte le racchette", poi le scorciatoie. Il link per centri e maestri sta in fondo al menu, con lingua e account. <a href="T91_mockup_menu_mobile.html" style="text-decoration:underline">Guarda il mockup →</a></p></div>
+    <div><b>Su mobile</b><p>Toccando Racchette, la prima riga è "Vedi tutte le racchette", poi le scorciatoie. Il link per centri e maestri sta in fondo al menu, con lingua e account. <a href="#mobile" style="text-decoration:underline">Guardalo qui sotto ↓</a></p></div>
+  </div>
+</div></section>
+
+<!-- MENU MOBILE -->
+<section class="sec fog mob" id="mobile"><div class="wrap">
+  <div class="center"><span class="eye">Il menu dal telefono</span><h2>E dal telefono?</h2>
+  <p class="sub">L'87,7% delle visite arriva da smartphone: il menu deve funzionare prima di tutto lì. Ecco i tre passaggi. Ogni telefono è cliccabile.</p></div>
+  <div class="phones">
+    <div class="ph-col">
+      <div class="ph-cap"><span class="n">1</span><b>La pagina</b><span>Tocca le tre linee in alto a sinistra</span></div>
+      <div class="fit" data-fit><div class="phone"><div class="scr" data-state="closed"></div></div></div>
+    </div>
+    <div class="ph-col">
+      <div class="ph-cap"><span class="n">2</span><b>Il menu aperto</b><span>Le voci principali, le offerte e i link utili</span></div>
+      <div class="fit" data-fit><div class="phone"><div class="scr" data-state="menu"></div></div></div>
+    </div>
+    <div class="ph-col">
+      <div class="ph-cap"><span class="n">3</span><b>Dentro "Racchette"</b><span>Prima "tutte", poi le scorciatoie</span></div>
+      <div class="fit" data-fit><div class="phone"><div class="scr" data-state="racchette"></div></div></div>
+    </div>
+  </div>
+  <p class="tip">Provate a toccare Abbigliamento, Accessori, Team o Servizi nel secondo telefono.</p>
+
+  <div class="notes">
+    <div class="note"><b>Tutto con il pollice</b><p>Voci grandi, una sotto l'altra. Ogni voce con la freccia apre il suo sottomenu, e "Menu" in alto torna indietro.</p></div>
+    <div class="note"><b>Nessuno è obbligato a scegliere</b><p>In ogni sottomenu il primo pulsante è sempre "Vedi tutte" o "Vedi tutto". Livello, stile e collezioni sono solo scorciatoie.</p></div>
+    <div class="note"><b>La seconda barra, in fondo</b><p>Offerte, centri e maestri, lingua e WhatsApp stanno sotto le voci principali: sempre presenti, senza distrarre chi compra.</p></div>
   </div>
 </div></section>
 
 <!-- FILTRI -->
-<section class="sec fog" id="filtri"><div class="wrap">
+<section class="sec" id="filtri"><div class="wrap">
   <div class="center"><span class="eye">Una pagina, tanti filtri</span><h2>Si parte da tutte.<br>I filtri fanno il resto.</h2>
   <p class="sub">Racchette e accessori funzionano allo stesso modo: si vedono tutti i prodotti, e ogni filtro scelto cambia l'indirizzo della pagina. Così ogni combinazione importante ha un link da condividere e da far trovare a Google. Provate qui sotto.</p></div>
   <div class="fdemo">
@@ -399,6 +531,108 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
   }
   document.querySelectorAll('.fd-tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.fd-tabs button').forEach(x=>x.classList.toggle('on',x===b));cat=b.dataset.cat;sel={};render();});
   render();
+})();
+</script>
+<template id="tpl-mob">
+  <div class="site">
+    <div class="s-bar">SPEDIZIONE GRATUITA 24/48H · RESO 30 GIORNI</div>
+    <div class="s-head">
+      <button class="js-open" aria-label="Apri il menu"><svg class="i"><use href="#i-burger"/></svg></button>
+      <img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='<b>T91</b>'">
+      <div class="r"><svg class="i"><use href="#i-search"/></svg><svg class="i"><use href="#i-user"/></svg><span class="s-cart"><svg class="i"><use href="#i-bag"/></svg><em>0</em></span></div>
+    </div>
+    <div class="s-hero"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=800" alt=""><div class="tx"><small>Novità</small><h2>Holo<br>Collection.</h2><span class="btn">Scopri le racchette</span></div></div>
+    <div class="s-row"><h3>Racchette per livello</h3><div class="s-tiles"><div>Principianti</div><div>Intermedi</div><div>Avanzati</div><div>Pro</div></div></div>
+  </div>
+
+  <div class="mn">
+    <div class="mn-h">
+      <img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='<b>T91</b>'">
+      <button class="x js-close" aria-label="Chiudi il menu"><svg class="i" style="width:18px;height:18px"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="mn-body">
+      <div class="pane l1">
+        <div class="srch"><svg class="i"><use href="#i-search"/></svg>Cerca racchette, abbigliamento…</div>
+        <ul class="m-list">
+          <li><button data-go="racchette">Racchette<svg class="i"><use href="#i-r"/></svg></button></li>
+          <li><button data-go="abbigliamento">Abbigliamento<svg class="i"><use href="#i-r"/></svg></button></li>
+          <li><button data-go="accessori">Accessori<svg class="i"><use href="#i-r"/></svg></button></li>
+          <li><button data-go="team">Team<svg class="i"><use href="#i-r"/></svg></button></li>
+          <li><button data-go="servizi">Servizi<svg class="i"><use href="#i-r"/></svg></button></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#"><span class="club">T91 Club</span></a></li>
+        </ul>
+        <a class="m-quiz" href="#"><span class="ic">?</span><span><b>Trova la tua T91</b><span>4 domande, risultato su WhatsApp</span></span></a>
+        <div class="m-sec">Offerte</div>
+        <ul class="m-small"><li><a href="#">Outlet</a></li><li><a href="#">Mystery Box</a></li><li><a href="#">Buoni regalo</a></li><li><a href="#">Trova T91 vicino a te</a></li></ul>
+        <a class="m-pro" href="#"><span><b>Sei un centro o un maestro?</b><span>Scopri il programma T91</span></span><em>→</em></a>
+        <div class="m-foot"><a href="#"><svg class="i" style="width:18px;height:18px"><use href="#i-user"/></svg>Accedi</a><a class="wa" href="#"><i></i>Assistenza WhatsApp</a><a class="lang" href="#"><b>IT</b><span>EN</span></a></div>
+      </div>
+
+      <div class="pane l2" data-pane="racchette">
+        <button class="back js-back"><svg class="i"><use href="#i-l"/></svg>Menu</button>
+        <h4>Racchette</h4>
+        <a class="all" href="#"><span><b>Vedi tutte le racchette</b><span>14 modelli, con i filtri</span></span><em>→</em></a>
+        <div class="m-sec" style="margin-top:0">Per livello</div>
+        <div class="chips"><a href="#">Principianti</a><a href="#">Intermedi</a><a href="#">Avanzati</a><a href="#">Pro</a></div>
+        <div class="m-sec">Per stile di gioco</div>
+        <div class="chips"><a href="#">Potenza</a><a href="#">Controllo</a><a href="#">Polivalenti</a></div>
+        <div class="m-sec">Collezioni</div>
+        <div class="cols2">
+          <a class="coll" href="#"><img src="https://t91padel.com/cdn/shop/files/Racchetta_HOLO_arancione_in_carbonio_cell.webp?v=1791307714&width=400" alt=""><span>Holo</span></a>
+          <a class="coll" href="#"><img src="https://t91padel.com/cdn/shop/files/IRIART_3_COVER_CELL_65d0846d-c225-4464-8165-448e3490274c.webp?v=1791215341&width=400" alt=""><span>Signature Pro</span></a>
+        </div>
+        <div class="cards2"><a class="v" href="#"><small>4 domande</small>Trova la tua T91</a><a class="f" href="#"><small>Fianco a fianco</small>Confronta le racchette</a></div>
+      </div>
+
+      <div class="pane l2" data-pane="abbigliamento">
+        <button class="back js-back"><svg class="i"><use href="#i-l"/></svg>Menu</button>
+        <h4>Abbigliamento</h4>
+        <a class="all" href="#"><span><b>Vedi tutto l'abbigliamento</b><span>Con i filtri per capo, taglia e colore</span></span><em>→</em></a>
+        <ul class="sub-list"><li><a href="#">Uomo<span>T-shirt, polo, felpe…</span></a></li><li><a href="#">Donna<span>Top, gonne, leggings…</span></a></li><li><a href="#">Personalizzabili<span class="nw">Nuova</span></a></li></ul>
+      </div>
+
+      <div class="pane l2" data-pane="accessori">
+        <button class="back js-back"><svg class="i"><use href="#i-l"/></svg>Menu</button>
+        <h4>Accessori</h4>
+        <a class="all" href="#"><span><b>Vedi tutti gli accessori</b><span>Con il filtro per tipo</span></span><em>→</em></a>
+        <div class="chips"><a href="#">Borse e zaini</a><a href="#">Overgrip e copritesta</a><a href="#">Palline</a><a href="#">Calze</a><a href="#">Cappellini</a><a href="#">Polsini</a><a href="#">Manicotto</a><a href="#">Ciabatte</a><a href="#">Teli</a></div>
+      </div>
+
+      <div class="pane l2" data-pane="team">
+        <button class="back js-back"><svg class="i"><use href="#i-l"/></svg>Menu</button>
+        <h4>Team</h4>
+        <ul class="sub-list"><li><a href="#">Team Pro<span>I nostri atleti</span></a></li><li><a href="#">Ambassador<span>Chi rappresenta T91</span></a></li><li><a href="#">Team Under<span>I giovani talenti</span></a></li></ul>
+      </div>
+
+      <div class="pane l2" data-pane="servizi">
+        <button class="back js-back"><svg class="i"><use href="#i-l"/></svg>Menu</button>
+        <h4>Servizi</h4>
+        <ul class="sub-list"><li><a href="#">T91 Care<span>Ritiro dell'usato</span></a></li><li><a href="#">T91 Repair<span>Riparazioni</span></a></li><li><a href="#">Protezione racchetta<span>Garanzia estesa</span></a></li><li><a href="#">Personalizzazione<span>Anche un pezzo</span></a></li><li><a href="#">Click &amp; Collect<span>Ritiro in negozio</span></a></li></ul>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+(function(){
+  const tpl=document.getElementById('tpl-mob');
+  document.querySelectorAll('.mob .scr').forEach(scr=>{
+    scr.appendChild(tpl.content.cloneNode(true));
+    const $=s=>scr.querySelector(s),$$=s=>[...scr.querySelectorAll(s)];
+    const mn=$('.mn'),l1=$('.pane.l1');
+    const open=()=>mn.classList.add('open');
+    const close=()=>{mn.classList.remove('open');setTimeout(back,350);};
+    const go=k=>{$$('.pane.l2').forEach(p=>p.classList.toggle('in',p.dataset.pane===k));l1.classList.add('away');};
+    const back=()=>{$$('.pane.l2').forEach(p=>p.classList.remove('in'));l1.classList.remove('away');};
+    $('.js-open').onclick=open;$('.js-close').onclick=close;
+    $$('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
+    $$('.js-back').forEach(b=>b.onclick=back);
+    $$('a[href="#"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+    const st=scr.dataset.state;
+    if(st!=='closed'){mn.style.transition='none';open();if(st==='racchette'){$$('.pane').forEach(p=>p.style.transition='none');go('racchette');}requestAnimationFrame(()=>requestAnimationFrame(()=>{mn.style.transition='';$$('.pane').forEach(p=>p.style.transition='');}));}
+  });
+  function fit(){document.querySelectorAll('.mob [data-fit]').forEach(w=>{const d=w.firstElementChild;const s=Math.min(1,w.clientWidth/414);d.style.transform=`scale(${s})`;w.style.height=(d.offsetHeight*s)+'px';});}
+  addEventListener('resize',fit);fit();document.fonts&&document.fonts.ready.then(fit);
 })();
 </script>
 </body>
