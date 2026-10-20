@@ -217,6 +217,12 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 .d b{font-size:20px;letter-spacing:-.015em;margin-top:4px}
 .d p{font-size:15px;color:#3A3A3C}
 .h3q{font-weight:400;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;margin-top:64px}
+.need{display:grid;gap:16px;margin-top:24px}
+@media(min-width:800px){.need{grid-template-columns:1fr 1fr}}
+.need div{background:#000;color:#F5F5F7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:8px}
+.need .n{width:40px;height:40px;border-radius:50%;background:var(--volt);color:#000;display:grid;place-items:center;font-size:17px;margin-bottom:6px}
+.need b{font-size:22px;letter-spacing:-.015em;line-height:1.15}
+.need p{font-size:16px;color:#C7C7CC}
 .foot{background:var(--fog);color:var(--mute);font-size:12px;padding:28px 0;border-top:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .foot a{text-decoration:underline}
@@ -226,7 +232,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 
 <div class="nav"><div class="wrap">
   <div class="br"><img src="https://t91padel.com/cdn/shop/files/Logo_T91_Nero.svg?v=1698236978" alt="T91" onerror="this.outerHTML='T91'"> Alberatura del sito</div>
-  <nav><a href="#oggi">Oggi</a><a href="#menu">Il nuovo menu</a><a href="#albero">L'albero</a><a href="#filtri">Filtri</a><a href="#percorsi">Collegamenti</a><a href="#pagine">Pagine da fare</a><a href="#domande">Decisioni</a><a href="index.html">← Indice</a></nav>
+  <nav><a href="#oggi">Oggi</a><a href="#menu">Il nuovo menu</a><a href="#albero">L'albero</a><a href="#filtri">Filtri</a><a href="#percorsi">Collegamenti</a><a href="#domande">Decisioni</a><a href="index.html">← Indice</a></nav>
 </div></div>
 
 <header class="hero"><div class="wrap">
@@ -294,9 +300,9 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
   </div>
   <p style="text-align:center;font-size:13px;color:var(--mute);margin-top:14px">Livelli e stili di gioco assegnati solo come esempio: quelli veri li indicherete voi.</p>
   <div class="mm-note">
-    <div><b>Un filtro = un indirizzo pulito</b><p><code>/racchette/principianti</code>, <code>/racchette/potenza</code>, <code>/accessori/calze</code>. Sono le pagine che Google indicizza, ognuna con il suo titolo e un breve testo.</p></div>
-    <div><b>Più filtri insieme</b><p>Si combinano nell'indirizzo, per esempio <code>/racchette/principianti/controllo</code>. Le combinazioni con prezzo o peso restano utilizzabili ma non vengono indicizzate, per non creare pagine doppie.</p></div>
-    <div><b>I livelli li definite voi</b><p>Per ogni racchetta ci indicate livello e stile di gioco: sono i dati da cui nascono i filtri e le pagine.</p></div>
+    <div><b>Ogni filtro ha il suo link</b><p>Per esempio <code>/racchette/principianti</code> o <code>/accessori/calze</code>. Si può condividere, usare nelle pubblicità e Google lo trova quando qualcuno cerca "racchette padel principianti".</p></div>
+    <div><b>Più filtri insieme</b><p>Si possono combinare: <code>/racchette/principianti/controllo</code> mostra le racchette da controllo per principianti.</p></div>
+    <div><b>I dati li date voi</b><p>Per ogni racchetta ci indicate livello e stile di gioco: da lì nascono i filtri. È il primo punto della lista in fondo.</p></div>
   </div>
 </div></section>
 
@@ -388,7 +394,7 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
       <div class="box"><h4>Nel footer</h4><ul><li>Chi siamo <code>/chi-siamo</code></li><li>Assistenza e FAQ <code>/assistenza</code></li><li>Spedizioni e resi</li><li>Privacy, cookie, termini</li></ul></div>
     </div>
     <div class="en">
-      <div><span class="eye" style="margin:0">Tutto il sito anche in inglese</span><h3>Ogni pagina ha la sua versione inglese.</h3><p>Stesso albero, stessi filtri, indirizzi tradotti sotto <code>/en</code>. La lingua si cambia da ogni pagina e il sito propone quella del visitatore.</p></div>
+      <div><span class="eye" style="margin:0">Tutto il sito anche in inglese</span><h3>Ogni pagina ha la sua versione inglese.</h3><p>Stesse pagine e stessi filtri, con gli indirizzi in inglese. La lingua si cambia da ogni pagina. Alle traduzioni pensiamo noi.</p></div>
       <ul><li><code>/racchette/principianti</code><span>→</span><code>/en/rackets/beginners</code></li><li><code>/abbigliamento/donna</code><span>→</span><code>/en/apparel/women</code></li><li><code>/accessori/calze</code><span>→</span><code>/en/accessories/socks</code></li><li><code>/team/pro</code><span>→</span><code>/en/team/pro</code></li><li><code>/servizi/repair</code><span>→</span><code>/en/services/repair</code></li></ul>
     </div>
   </div>
@@ -414,48 +420,21 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
   </div>
 </div></section>
 
-<!-- PAGINE DA FARE -->
-<section class="sec fog" id="pagine"><div class="wrap">
-  <div class="center"><span class="eye">Pagine da disegnare</span><h2>Molte pagine,<br>pochi modelli.</h2>
-  <p class="sub">Non disegniamo ogni pagina da zero: costruiamo dei modelli e li riempiamo. Con questi modelli copriamo tutto l'albero, in italiano e in inglese.</p></div>
-  <div class="count"><div><div class="n">16</div><div class="l">modelli di pagina</div></div><div><div class="n">11</div><div class="l">per il lancio di gennaio</div></div><div><div class="n">1</div><div class="l">già pronto (scheda racchetta)</div></div></div>
-  <div class="tpls">
-    <div class="tpl done"><div class="top"><span class="n">01</span><span class="ph f1">Lancio</span></div><b>Scheda racchetta</b><p>Galleria, prezzo, peso, Care, recensioni, confronto, pro.</p><span class="ex">Pronta nel mockup</span></div>
-    <div class="tpl"><div class="top"><span class="n">02</span><span class="ph f1">Lancio</span></div><b>Home</b><p>Novità, racchette per livello, team, servizi, Club.</p><span class="ex">/</span></div>
-    <div class="tpl"><div class="top"><span class="n">03</span><span class="ph f1">Lancio</span></div><b>Categoria con filtri</b><p>Tutti i prodotti e filtri che generano gli indirizzi. Un solo modello per racchette, abbigliamento e accessori.</p><span class="ex">/racchette, /racchette/principianti, /accessori/calze…</span></div>
-    <div class="tpl"><div class="top"><span class="n">04</span><span class="ph f1">Lancio</span></div><b>Scheda abbigliamento e accessori</b><p>Colori e taglie nella stessa scheda, personalizzazione.</p><span class="ex">/abbigliamento/uomo/halo-t-shirt</span></div>
-    <div class="tpl"><div class="top"><span class="n">05</span><span class="ph f1">Lancio</span></div><b>Carrello e checkout</b><p>Care, Club, Klarna, Click &amp; Collect.</p><span class="ex">/carrello</span></div>
-    <div class="tpl"><div class="top"><span class="n">06</span><span class="ph f1">Lancio</span></div><b>Trova la tua T91</b><p>Quiz in 4 domande con risultato su WhatsApp.</p><span class="ex">/racchette/trova-la-tua-t91</span></div>
-    <div class="tpl"><div class="top"><span class="n">07</span><span class="ph f1">Lancio</span></div><b>Confronta</b><p>Fino a 4 racchette affiancate.</p><span class="ex">/racchette/confronta</span></div>
-    <div class="tpl"><div class="top"><span class="n">08</span><span class="ph f1">Lancio</span></div><b>Pagina servizio</b><p>Un modello per Care, Repair, Protezione, Personalizza, Click &amp; Collect.</p><span class="ex">/servizi/…</span></div>
-    <div class="tpl"><div class="top"><span class="n">09</span><span class="ph f1">Lancio</span></div><b>T91 Club</b><p>Vantaggi, prezzo, iscrizione.</p><span class="ex">/club</span></div>
-    <div class="tpl"><div class="top"><span class="n">10</span><span class="ph f1">Lancio</span></div><b>Account</b><p>Ordini, Club, quiz salvato, richieste.</p><span class="ex">/account</span></div>
-    <div class="tpl"><div class="top"><span class="n">11</span><span class="ph warn">Dopo il lancio · da confermare</span></div><b>Team</b><p>Pro, Ambassador e Under: presentazione degli atleti con filtri.</p><span class="ex">/team/pro, /team/ambassador, /team/under</span></div>
-    <div class="tpl"><div class="top"><span class="n">12</span><span class="ph warn">Dopo il lancio · da confermare</span></div><b>Scheda atleta</b><p>Ranking, tornei, la sua pala, il suo set.</p><span class="ex">/team/nome-cognome</span></div>
-    <div class="tpl"><div class="top"><span class="n">13</span><span class="ph f1">Lancio</span></div><b>Blog e articolo</b><p>Elenco per rubrica e pagina articolo con prodotti collegati.</p><span class="ex">/blog, /blog/guide/…</span></div>
-    <div class="tpl"><div class="top"><span class="n">14</span><span class="ph">Dopo il lancio</span></div><b>Centri e maestri</b><p>Il programma, centri, maestri, Experience, contatti.</p><span class="ex">/centri-e-maestri</span></div>
-    <div class="tpl"><div class="top"><span class="n">15</span><span class="ph">Dopo il lancio</span></div><b>Trova T91</b><p>Mappa dei centri partner.</p><span class="ex">/trova-t91</span></div>
-    <div class="tpl"><div class="top"><span class="n">16</span><span class="ph">Dopo il lancio</span></div><b>Pagina di testo</b><p>Chi siamo, FAQ, spedizioni, resi, privacy.</p><span class="ex">/chi-siamo, /assistenza…</span></div>
-  </div>
-</div></section>
-
 <!-- DOMANDE -->
 <section class="sec" id="domande"><div class="wrap">
   <div class="center"><span class="eye">Decisioni</span><h2>Cosa abbiamo deciso.</h2></div>
   <div class="dec">
-    <div class="d ok"><span class="st">Deciso</span><b>Racchette</b><p>Il clic porta a tutte le racchette. Livello, gioco e collezione sono filtri che generano indirizzi propri. I livelli dei modelli li indica T91.</p></div>
+    <div class="d ok"><span class="st">Deciso</span><b>Racchette</b><p>Cliccando "Racchette" si vedono tutte. Livello, stile di gioco e collezione sono filtri, e ogni filtro ha il suo link.</p></div>
     <div class="d ok"><span class="st">Deciso</span><b>Accessori</b><p>Tutti visibili in una pagina, filtrabili per tipo con lo stesso sistema.</p></div>
     <div class="d ok"><span class="st">Deciso</span><b>Mystery Box</b><p>Resta, nella barra delle offerte in alto.</p></div>
     <div class="d ok"><span class="st">Deciso</span><b>Ambassador</b><p>La pagina attuale viene sostituita da una presentazione degli atleti ambassador, dentro il Team.</p></div>
-    <div class="d ok"><span class="st">Deciso</span><b>Inglese</b><p>Tutto il sito è anche in inglese, con indirizzi tradotti sotto /en.</p></div>
+    <div class="d ok"><span class="st">Deciso</span><b>Inglese</b><p>Tutto il sito è anche in inglese. Le traduzioni le curiamo noi.</p></div>
     <div class="d wait"><span class="st">Segnalato</span><b>Team Pro dopo il lancio</b><p>Per averlo a gennaio servono foto, ranking e pala di ogni atleta entro inizio dicembre.</p></div>
   </div>
-  <h3 class="h3q">Ancora da definire</h3>
-  <div class="qs">
-    <div class="q"><span>01</span>Elenco dei livelli e degli stili di gioco per ogni racchetta.</div>
-    <div class="q"><span>02</span>Quali filtri oltre a livello e gioco: peso, prezzo, forma, carbonio?</div>
-    <div class="q"><span>03</span>Chi traduce i testi in inglese (schede prodotto, servizi, blog)?</div>
-    <div class="q"><span>04</span>Il blog sarà tradotto tutto o solo gli articoli principali?</div>
+  <h3 class="h3q">Cosa ci serve da Tom</h3>
+  <div class="need">
+    <div><span class="n">1</span><b>Livello e stile di gioco di ogni racchetta</b><p>Per ogni modello: a che livello è adatta (principiante, intermedio, avanzato, pro) e che gioco favorisce (potenza, controllo, polivalente). Basta un elenco.</p></div>
+    <div><span class="n">2</span><b>I filtri che volete</b><p>Oltre a livello e stile di gioco: quali altri filtri servono ai vostri clienti? Per esempio peso, prezzo, forma o tipo di carbonio.</p></div>
   </div>
 </div></section>
 
