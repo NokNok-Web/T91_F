@@ -7,7 +7,7 @@ head=src[:src.index('</head>')].replace('<title>Il nuovo T91</title>','<title>T9
 svg=src[src.index('<svg width="0"'):src.index('</svg>',src.index('<svg width="0"'))+6]
 import base64
 b64=lambda f:'data:image/jpeg;base64,'+base64.b64encode(open(f,'rb').read()).decode()
-HD=b64('img/hero-desktop.jpg')
+HD=b64('img/hero-desktop.jpg'); VB=b64('img/hero-mobile.jpg')
 n1=re.search(r'src="(data:image/jpeg;base64,[^"]+)"',src).group(1)
 C=S.CDN; PDP='T91_mockup_pagina_prodotto.html'
 def card(name,img,price,badge='',link='#',old='',sub='',cat=''):
@@ -65,6 +65,15 @@ body=f'''<div class="p home">
   <section class="h-sec">
     <div class="h-tt"><h2>I più venduti.</h2>{NAV(0,0)}</div>
     <div class="h-car"><div class="h-track">{best}</div></div>
+  </section>
+
+  <section class="h-vibe">
+    <img src="{VB}" alt="Giocatore al servizio, in bianco e nero">
+    <div class="tx">
+      <span class="ey">From players to players</span>
+      <h2>Prima di essere<br>un brand, siamo<br>giocatori.</h2>
+      <p>T91 nasce in campo, a Osio Sotto. Ogni racchetta la proviamo noi e la provano i nostri atleti, prima di arrivare a te.</p>
+    </div>
   </section>
 
   <section class="h-sec h-wear">
@@ -245,6 +254,14 @@ css='''<style>
 .h-sg .s3 .tx>span{color:#222}
 .h-sg u{text-decoration:none;font-size:14.5px;color:var(--volt);margin-top:8px}
 .h-sg .s3 u{color:#000}
+/* manifesto */
+.h-vibe{position:relative;min-height:720px;background:#000;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+.h-vibe img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:grayscale(1) contrast(1.05)}
+.h-vibe::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(0,0,0,.85) 92%)}
+.h-vibe .tx{position:relative;z-index:1;padding:32px 20px 44px;max-width:760px}
+.h-vibe .ey{color:var(--volt)}
+.h-vibe h2{font-weight:400;font-size:46px;line-height:.95;letter-spacing:-.05em}
+.h-vibe p{font-size:16px;color:#E5E5EA;margin-top:16px;max-width:460px}
 /* club */
 .h-club{margin:56px 20px 0;background:#000;color:#fff;border-radius:28px;padding:32px 24px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden}
 .h-club::before{content:"-30%";position:absolute;right:-20px;bottom:-40px;font-size:220px;letter-spacing:-.08em;color:#1D1D1F;line-height:1}
@@ -323,6 +340,13 @@ css='''<style>
   .h-sg b{font-size:52px}
   .h-sg .s1 b{font-size:72px}
   .h-sg .tx>span{font-size:17px}
+  .h-vibe{min-height:860px}
+  .h-vibe img{object-position:50% 20%}
+  .h-vibe::after{background:linear-gradient(90deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,0) 70%)}
+  .h-vibe{align-items:center}
+  .h-vibe .tx{padding:0 0 0 80px}
+  .h-vibe h2{font-size:96px}
+  .h-vibe p{font-size:20px}
   .h-club{margin:112px 80px 0;flex-direction:row;align-items:center;justify-content:space-between;padding:72px 72px;border-radius:40px}
   .h-club::before{font-size:420px;right:-30px;bottom:-110px}
   .h-club h2{font-size:112px}
